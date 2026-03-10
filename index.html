@@ -30,14 +30,13 @@
           </svg>
         </a>
         <p class="eyebrow">Xint Security Research</p>
-        <h2>Bugs discovered by Xint</h2>
-        <p class="lede">Public security findings found and disclosed by Xint</p>
+        <p class="lede">Xint's public security findings. Found autonomously. Disclosed responsibly.</p>
       </header>
 
       <section class="controls" aria-label="filters">
         <label>
           <span>Search title</span>
-          <input id="search-input" type="search" placeholder="e.g. SQL injection" />
+          <input id="search-input" type="search" placeholder="e.g. UAF" />
         </label>
 
         <label>
@@ -55,9 +54,9 @@
         <label>
           <span>Sort</span>
           <select id="sort-select">
+            <option value="severity_desc" selected>Severity: high to low</option>
             <option value="newest">Newest first</option>
             <option value="oldest">Oldest first</option>
-            <option value="severity_desc">Severity: high to low</option>
             <option value="severity_asc">Severity: low to high</option>
             <option value="title_az">Title A-Z</option>
           </select>

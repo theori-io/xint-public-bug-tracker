@@ -238,6 +238,13 @@ select:focus-visible,
   color: var(--card-foreground);
 }
 
+.opened-date {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--muted-foreground);
+  white-space: nowrap;
+}
+
 .caret {
   font-size: 1.1rem;
   color: var(--muted-foreground);
@@ -294,9 +301,16 @@ select:focus-visible,
 
   .card-head {
     align-items: flex-start;
+    flex-wrap: wrap;
   }
 
   .sev {
     margin-top: 0.1rem;
+  }
+
+  .opened-date {
+    width: 100%;
+    margin-left: calc(76px + 0.8rem);
+    margin-top: -0.15rem;
   }
 }

@@ -15,7 +15,7 @@ const state = {
   paged: [],
   q: '',
   sev: 'all',
-  sort: 'newest',
+  sort: 'severity_desc',
   page: 1,
 };
 
@@ -113,6 +113,7 @@ function renderCards() {
       const body = escapeHtml(item.body_markdown || 'No description provided.');
       const created = formatDate(item.created_at);
       const updated = formatDate(item.updated_at);
+      const openedLabel = escapeHtml(`${created}`);
       const issueLink = item.html_url || '#';
       const issueNumber = item.number ? `#${item.number}` : '';
 
@@ -121,6 +122,7 @@ function renderCards() {
           <button class="card-head" type="button" aria-expanded="false">
             <span class="sev sev-${sev}">${sevLabel}</span>
             <h2 class="title">${title}</h2>
+            <span class="opened-date">${openedLabel}</span>
             <span class="caret" aria-hidden="true">&#8250;</span>
           </button>
           <div class="card-body" hidden>
@@ -221,6 +223,7 @@ async function loadData() {
 
 async function main() {
   bindEvents();
+  el.sort.value = state.sort;
 
   try {
     await loadData();
