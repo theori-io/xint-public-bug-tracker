@@ -1,0 +1,302 @@
+:root {
+  --radius: 0.65rem;
+  --background: oklch(100% 0 0);
+  --foreground: oklch(14.1% 0.005 285.823);
+  --card: oklch(100% 0 0);
+  --card-foreground: oklch(14.1% 0.005 285.823);
+  --primary: oklch(48.8% 0.243 264.376);
+  --primary-foreground: oklch(97% 0.014 254.604);
+  --muted: oklch(96.7% 0.001 286.375);
+  --muted-foreground: oklch(55.2% 0.016 285.938);
+  --accent: oklch(96.7% 0.001 286.375);
+  --accent-foreground: oklch(21% 0.006 285.885);
+  --border: oklch(92% 0.004 286.32);
+  --input: oklch(92% 0.004 286.32);
+  --ring: oklch(70.8% 0 0);
+  --destructive: oklch(57.7% 0.245 27.325);
+  --critical: oklch(57.7% 0.245 27.325);
+  --high: oklch(68% 0.19 45);
+  --medium: oklch(69% 0.13 95);
+  --low: oklch(62% 0.14 155);
+  --unknown: oklch(55.2% 0.016 285.938);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(90rem 30rem at 10% -10%, oklch(98% 0.015 261) 0%, transparent 60%),
+    radial-gradient(70rem 22rem at 100% -20%, oklch(99% 0.008 286) 0%, transparent 70%),
+    var(--background);
+  color: var(--foreground);
+  font-family: "Inter Variable", Inter, "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+.bg-glow {
+  position: fixed;
+  width: 44rem;
+  height: 44rem;
+  border-radius: 999px;
+  filter: blur(80px);
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bg-glow-a {
+  top: -18rem;
+  left: -20rem;
+  background: oklch(72% 0.08 262);
+}
+
+.bg-glow-b {
+  right: -18rem;
+  bottom: -22rem;
+  background: oklch(80% 0.045 276);
+}
+
+.container {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  letter-spacing: -0.03em;
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--foreground);
+  margin-bottom: 0.8rem;
+  text-decoration: none;
+}
+
+.brand-link:hover {
+  color: var(--primary);
+}
+
+.brand-link:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--ring) 70%, var(--primary) 30%);
+  outline-offset: 4px;
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.eyebrow {
+  margin: 0 0 0.45rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.75rem;
+}
+
+.lede {
+  margin: 0.5rem 0 1.35rem;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  position: sticky;
+  top: 0.6rem;
+  z-index: 5;
+  padding: 0.625rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: color-mix(in oklab, var(--card) 96%, var(--primary) 4%);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 1px 2px color-mix(in oklab, var(--foreground) 10%, transparent);
+}
+
+.controls label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  color: var(--muted-foreground);
+}
+
+input,
+select {
+  width: 100%;
+  border: 1px solid var(--input);
+  border-radius: calc(var(--radius) - 2px);
+  padding: 0.52rem 0.62rem;
+  background: var(--card);
+  font: inherit;
+  color: var(--card-foreground);
+}
+
+input:focus-visible,
+select:focus-visible,
+.card-head:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--ring) 70%, var(--primary) 30%);
+  outline-offset: 2px;
+}
+
+.results-summary {
+  margin: 0.75rem 0;
+  color: var(--muted-foreground);
+  font-size: 0.92rem;
+}
+
+.cards {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.95rem;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  border: 1px solid var(--input);
+  background: var(--card);
+  color: var(--card-foreground);
+  border-radius: calc(var(--radius) - 2px);
+  padding: 0.35rem 0.55rem;
+  font: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background: color-mix(in oklab, var(--accent) 85%, var(--primary) 15%);
+}
+
+.pagination button[aria-current="page"] {
+  border-color: var(--primary);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.pagination button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  overflow: hidden;
+  box-shadow: 0 1px 2px color-mix(in oklab, var(--foreground) 8%, transparent);
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  border: 0;
+  background: none;
+  text-align: left;
+  padding: 0.8rem 0.9rem;
+  cursor: pointer;
+}
+
+.card-head:hover {
+  background: color-mix(in oklab, var(--accent) 85%, var(--primary) 15%);
+}
+
+.sev {
+  min-width: 76px;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border-radius: 999px;
+  padding: 0.3rem 0.52rem;
+  text-align: center;
+  color: #fff;
+}
+
+.sev-critical { background: var(--critical); }
+.sev-high { background: var(--high); }
+.sev-medium { background: var(--medium); }
+.sev-low { background: var(--low); }
+.sev-unknown { background: var(--unknown); }
+
+.title {
+  margin: 0;
+  flex: 1;
+  font-size: 0.97rem;
+  line-height: 1.35;
+  color: var(--card-foreground);
+}
+
+.caret {
+  font-size: 1.1rem;
+  color: var(--muted-foreground);
+  transition: transform 160ms ease;
+}
+
+.card[open] .caret {
+  transform: rotate(90deg);
+}
+
+.card-body {
+  border-top: 1px solid var(--border);
+  padding: 0.8rem 0.9rem 0.9rem;
+}
+
+.body-text {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  color: var(--card-foreground);
+  font-size: 0.92rem;
+}
+
+.meta {
+  margin: 0.65rem 0 0;
+  font-size: 0.82rem;
+  color: var(--muted-foreground);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.meta a {
+  color: var(--primary);
+  font-weight: 500;
+  text-underline-offset: 0.15em;
+}
+
+.error {
+  margin-top: 1rem;
+  border: 1px solid color-mix(in oklab, var(--destructive) 30%, var(--border) 70%);
+  background: color-mix(in oklab, var(--destructive) 8%, var(--card) 92%);
+  color: color-mix(in oklab, var(--destructive) 85%, var(--foreground) 15%);
+  padding: 0.8rem;
+  border-radius: calc(var(--radius) - 2px);
+}
+
+@media (max-width: 760px) {
+  .controls {
+    grid-template-columns: 1fr;
+    position: static;
+  }
+
+  .card-head {
+    align-items: flex-start;
+  }
+
+  .sev {
+    margin-top: 0.1rem;
+  }
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bugs discovered by Xint</title>
+    <meta name="description" content="Public bug wall of Xint findings." />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow bg-glow-a"></div>
+    <div class="bg-glow bg-glow-b"></div>
+
+    <main class="container">
+      <header class="hero">
+        <a
+          class="brand-link"
+          href="https://code.xint.io"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit code.xint.io in a new tab"
+        >
+          <svg height="20" viewBox="0 0 51 20" fill="none" aria-label="Xint Logo">
+            <path d="M37.9758 5.52026H27.9821V19.4238H30.8197V8.11149H37.6862V19.4238H40.5245V7.80484L37.9758 5.52026Z" fill="currentColor"></path>
+            <path d="M25.3791 1.75171H22.539V4.10775H25.3791V1.75171Z" fill="currentColor"></path>
+            <path d="M25.3791 5.52026H22.539V19.423H25.3791V5.52026Z" fill="currentColor"></path>
+            <path d="M50.2273 8.0676V5.52044H45.968V0.384521L43.1278 2.92921V16.9216L45.968 19.4239H50.2273V16.9923H45.968V8.0676H50.2273Z" fill="currentColor"></path>
+            <path d="M16.3959 2.9292L11.9087 7.53489L4.79597 2.9292H3.13965L13.0908 11.1741L21.1244 2.9292H16.3959Z" fill="currentColor"></path>
+            <path d="M5.51288 19.4199L11.0803 13.6674L19.4679 19.4199H21.1242L9.88822 9.99658L0.772705 19.4199H5.51288Z" fill="currentColor"></path>
+          </svg>
+        </a>
+        <p class="eyebrow">Xint Security Research</p>
+        <h2>Bugs discovered by Xint</h2>
+        <p class="lede">Public security findings found and disclosed by Xint</p>
+      </header>
+
+      <section class="controls" aria-label="filters">
+        <label>
+          <span>Search title</span>
+          <input id="search-input" type="search" placeholder="e.g. SQL injection" />
+        </label>
+
+        <label>
+          <span>Severity</span>
+          <select id="severity-select">
+            <option value="all">All severities</option>
+            <option value="critical">Critical</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+            <option value="unknown">Unknown</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Sort</span>
+          <select id="sort-select">
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+            <option value="severity_desc">Severity: high to low</option>
+            <option value="severity_asc">Severity: low to high</option>
+            <option value="title_az">Title A-Z</option>
+          </select>
+        </label>
+      </section>
+
+      <p id="results-summary" class="results-summary" aria-live="polite"></p>
+      <section id="cards" class="cards" aria-label="bugs"></section>
+      <nav id="pagination" class="pagination" aria-label="Pagination"></nav>
+      <p id="error-message" class="error" hidden></p>
+    </main>
+
+    <script type="module" src="assets/app.js"></script>
+  </body>
+</html>
