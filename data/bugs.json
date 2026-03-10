@@ -1,0 +1,709 @@
+{
+  "generated_at": "2026-03-10T03:38:25.043Z",
+  "source_repo": "theori-io/xint-public-bug-tracker",
+  "count": 41,
+  "items": [
+    {
+      "id": 4014041412,
+      "number": 41,
+      "title_raw": "[HIGH] Bug in ghostscript under embargo",
+      "title_display": "Bug in ghostscript under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/41",
+      "created_at": "2026-03-03T00:34:13Z",
+      "updated_at": "2026-03-03T00:34:15Z",
+      "body_markdown": "A vulnerability was discovered by Xint in ghostscript and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high.\n\n---\n\nReported: 2026-03-02\n\n"
+    },
+    {
+      "id": 4013972800,
+      "number": 40,
+      "title_raw": "[HIGH] Bug in ghostscript under embargo",
+      "title_display": "Bug in ghostscript under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/40",
+      "created_at": "2026-03-03T00:07:01Z",
+      "updated_at": "2026-03-03T00:07:04Z",
+      "body_markdown": "A vulnerability was discovered by Xint in ghostscript and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high.\n\n---\n\nReported: 2026-03-02\n"
+    },
+    {
+      "id": 4013944173,
+      "number": 39,
+      "title_raw": "[HIGH] Bug in ghostscript under embargo",
+      "title_display": "Bug in ghostscript under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/39",
+      "created_at": "2026-03-02T23:55:28Z",
+      "updated_at": "2026-03-02T23:55:39Z",
+      "body_markdown": "A vulnerability was discovered by Xint in ghostscript and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high.\n\n---\n\nReported: 2026-03-02\n\n"
+    },
+    {
+      "id": 3972797564,
+      "number": 38,
+      "title_raw": "[HIGH] Bug in qemu under embargo",
+      "title_display": "Bug in qemu under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/38",
+      "created_at": "2026-02-21T20:57:39Z",
+      "updated_at": "2026-02-21T20:57:41Z",
+      "body_markdown": "A vulnerability was discovered by Xint in qemu and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high\n\n---\n\nReported: 2026-02-20\n"
+    },
+    {
+      "id": 3970416371,
+      "number": 37,
+      "title_raw": "[HIGH] Bug in Android LWIS under embargo",
+      "title_display": "Bug in Android LWIS under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/37",
+      "created_at": "2026-02-20T21:18:23Z",
+      "updated_at": "2026-02-20T21:18:25Z",
+      "body_markdown": "A vulnerability was discovered by Xint in the Android LWIS driver and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high\n\n---\n\nReported: 2026-02-20\nAcknowledged: 2026-02-20\n"
+    },
+    {
+      "id": 3970004568,
+      "number": 36,
+      "title_raw": "[HIGH] Bug in Android LWIS under embargo",
+      "title_display": "Bug in Android LWIS under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/36",
+      "created_at": "2026-02-20T19:18:07Z",
+      "updated_at": "2026-02-20T19:18:10Z",
+      "body_markdown": "A vulnerability was discovered by Xint in the Android LWIS driver and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high\n\n---\n\nReported: 2026-02-20\nAcknowledged: 2026-02-20\n"
+    },
+    {
+      "id": 3969721311,
+      "number": 35,
+      "title_raw": "[HIGH] Bug in Android bcm4390 under embargo",
+      "title_display": "Bug in Android bcm4390 under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/35",
+      "created_at": "2026-02-20T18:02:33Z",
+      "updated_at": "2026-02-20T18:02:35Z",
+      "body_markdown": "A vulnerability was discovered by Xint in Android's bcm4390 wlan driver and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high\n\n---\n\nReported: 2026-02-20\nAcknowledged: 2026-02-20\n"
+    },
+    {
+      "id": 3966494522,
+      "number": 34,
+      "title_raw": "[HIGH] Bug in Android LWIS under embargo",
+      "title_display": "Bug in Android LWIS under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/34",
+      "created_at": "2026-02-20T04:25:54Z",
+      "updated_at": "2026-02-20T04:25:56Z",
+      "body_markdown": "A vulnerability was discovered by Xint in the Android LWIS driver and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high\n\n---\n\nReported: 2026-02-19\nAcknowledged: 2026-02-19\n"
+    },
+    {
+      "id": 3960441309,
+      "number": 33,
+      "title_raw": "[MEDIUM] Bug in Android bcm4390 under embargo",
+      "title_display": "Bug in Android bcm4390 under embargo",
+      "severity": "medium",
+      "severity_rank": 2,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "medium"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/33",
+      "created_at": "2026-02-19T00:48:57Z",
+      "updated_at": "2026-02-19T18:15:15Z",
+      "body_markdown": "A vulnerability was discovered by Xint in Android's bcm4390 wlan driver and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as medium\n\n---\n\nReported: 2026-02-19\nAcknowledged: 2026-02-19"
+    },
+    {
+      "id": 3960074395,
+      "number": 32,
+      "title_raw": "[HIGH] Bug in Android bcm4390 under embargo",
+      "title_display": "Bug in Android bcm4390 under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/32",
+      "created_at": "2026-02-18T22:31:00Z",
+      "updated_at": "2026-02-18T23:45:06Z",
+      "body_markdown": "A vulnerability was discovered by Xint in Android's bcm4390 wlan driver and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high\n\n---\n\nReported: 2026-02-18\nAcknowledged: 2026-02-18\n"
+    },
+    {
+      "id": 3959894711,
+      "number": 31,
+      "title_raw": "[HIGH] Bug in Android bcm4390 under embargo",
+      "title_display": "Bug in Android bcm4390 under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/31",
+      "created_at": "2026-02-18T21:35:40Z",
+      "updated_at": "2026-02-18T23:44:44Z",
+      "body_markdown": "A vulnerability was discovered by Xint in the Android bcm4390 wlan driver and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high\n\n---\n\nReported: 2026-02-18\nAcknowledged: 2026-02-18\n"
+    },
+    {
+      "id": 3959535096,
+      "number": 30,
+      "title_raw": "[HIGH] Bug in CUPS under embargo",
+      "title_display": "Bug in CUPS under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/30",
+      "created_at": "2026-02-18T19:56:31Z",
+      "updated_at": "2026-02-18T23:44:25Z",
+      "body_markdown": "A vulnerability was discovered by Xint in CUPS and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as HIGH\n\n---\n\nReported: 2026-02-12\n[Acknowledged: 2026-02-13]\n"
+    },
+    {
+      "id": 3959534776,
+      "number": 29,
+      "title_raw": "[HIGH] Bug in openssl under embargo",
+      "title_display": "Bug in openssl under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/29",
+      "created_at": "2026-02-18T19:56:26Z",
+      "updated_at": "2026-02-18T23:43:44Z",
+      "body_markdown": "A vulnerability was discovered by Xint in OpenSSL and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as [HIGH]\n\n---\n\nReported: 2026-02-17\n[Acknowledged: 20YY-MM-DD]\n"
+    },
+    {
+      "id": 3959330532,
+      "number": 28,
+      "title_raw": "[MEDIUM] Bug in Android mediaserver under embargo",
+      "title_display": "Bug in Android mediaserver under embargo",
+      "severity": "medium",
+      "severity_rank": 2,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "medium"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/28",
+      "created_at": "2026-02-18T19:01:29Z",
+      "updated_at": "2026-02-18T23:43:18Z",
+      "body_markdown": "A vulnerability was discovered by Xint in Android mediaserver and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as medium.\n\n---\n\nReported: 2026-02-18\nAcknowledged: 2026-02-18\n"
+    },
+    {
+      "id": 3959316767,
+      "number": 27,
+      "title_raw": "[HIGH] Bug in Android mediaextractor under embargo",
+      "title_display": "Bug in Android mediaextractor under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/27",
+      "created_at": "2026-02-18T18:57:37Z",
+      "updated_at": "2026-02-18T23:43:07Z",
+      "body_markdown": "A vulnerability was discovered by Xint in Android mediaextractor and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high\n\n---\n\nReported: 2026-02-16\nAcknowledged: 2026-02-16\n"
+    },
+    {
+      "id": 3959311703,
+      "number": 26,
+      "title_raw": "[HIGH] Bug in Android Bluetooth under embargo",
+      "title_display": "Bug in Android Bluetooth under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/26",
+      "created_at": "2026-02-18T18:56:13Z",
+      "updated_at": "2026-02-18T23:42:34Z",
+      "body_markdown": "A vulnerability was discovered by Xint in Android's Bluetooth service and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high.\n\n---\n\nReported: 2026-02-15\nAcknowledged: 2026-02-15\n\n"
+    },
+    {
+      "id": 3928996225,
+      "number": 25,
+      "title_raw": "[CRITICAL] Bug in Android bcm4390 wlan driver under embargo",
+      "title_display": "Bug in Android bcm4390 wlan driver under embargo",
+      "severity": "critical",
+      "severity_rank": 4,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "critical"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/25",
+      "created_at": "2026-02-11T22:39:51Z",
+      "updated_at": "2026-02-11T23:11:55Z",
+      "body_markdown": "A vulnerability was discovered by Xint in the Android bcm4390 wlan driver and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as critical.\n\n---\n\nReported: 2026-02-11\nAcknowledged: 2026-02-11\n"
+    },
+    {
+      "id": 3928988743,
+      "number": 24,
+      "title_raw": "[MEDIUM] UAF in Android mali GPU driver",
+      "title_display": "UAF in Android mali GPU driver",
+      "severity": "medium",
+      "severity_rank": 2,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "medium"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/24",
+      "created_at": "2026-02-11T22:37:43Z",
+      "updated_at": "2026-03-03T20:17:31Z",
+      "body_markdown": "## Location\n\n`kbase_kcpu_cqs_set_process` in `kernel/google-modules/gpu/mali_kbase/csf/mali_kbase_csf_kcpu.c`\n\n## Description\n\nThe function dereferences the pointer “evt” after releasing its underlying kernel mapping via kbase_phy_alloc_mapping_put(). Specifically, after writing to evt and calling put (line 923), it evaluates KBASE_KTRACE_ADD_CSF_KCPU(...) with evt[BASEP_EVENT32_ERR_OFFSET/sizeof(u32)] (lines 925-926). The KTRACE macro captures its argument by value (mali_kbase_debug_ktrace_csf.h:186), so the dereference occurs post-put. If put() drops the last references, kbase_mem_kref_free() tears down the permanent mapping (mali_kbase_mem.c:1766-1769), and kbase_phy_alloc_mapping_term() unmaps/frees the mapping (mali_kbase_mem_linux.c:229-234), making “evt” invalid. This yields a use-after-free read and likely kernel page fault.\n\n\n## Trigger Conditions\n\n- An unprivileged app creates a Mali kbase GPU context and a KCPU command queue, and allocates a CQS sync object (backed by a kbase_mem_phy_alloc with permanent_map) to obtain its GPU address.\n- It enqueues a BASE_KCPU_COMMAND_TYPE_CQS_SET referencing that address so the kernel will call kbase_phy_alloc_mapping_get(), write to evt, and then kbase_phy_alloc_mapping_put().\n- Concurrently, the app frees/unmaps the underlying CQS allocation/region before the kernel reaches the KTRACE line, so the put() drops the final krefs and invokes kbase_mem_kref_free() which calls kbase_phy_alloc_mapping_term() to unmap the permanent_map.\n- Immediately after put(), KBASE_KTRACE_ADD_CSF_KCPU dereferences evt to fetch the error value, causing a UAF read that can fault and crash the kernel.\n\nThe race is feasible on SMP since the userspace free can happen between the kernel’s get and the KTRACE dereference.\n\n\n## Impact analysis\n\nThis can be driven by an unprivileged app through interaction with /dev/mali0 on Pixel devices.\nAt minimum, this vulnerability yields an unprivileged local DoS.\nIt also has potential for information disclosure via ktrace, but this requires root.\n\n\n## Crash log\n```\n\n[  277.542695][ T9089] Unable to handle kernel paging request at virtual address ffffffc03c130004\n[  277.542706][ T9089] Mem abort info:\n[  277.542711][ T9089]   ESR = 0x0000000096000007\n[  277.542716][ T9089]   EC = 0x25: DABT (current EL), IL = 32 bits\n[  277.542722][ T9089]   SET = 0, FnV = 0\n[  277.542726][ T9089]   EA = 0, S1PTW = 0\n[  277.542731][ T9089]   FSC = 0x07: level 3 translation fault\n[  277.542736][ T9089] Data abort info:\n[  277.542740][ T9089]   ISV = 0, ISS = 0x00000007\n[  277.542745][ T9089]   CM = 0, WnR = 0\n[  277.542750][ T9089] swapper pgtable: 4k pages, 39-bit VAs, pgdp=0000000081bbb000\n[  277.542756][ T9089] [ffffffc03c130004] pgd=10000000824a6003, p4d=10000000824a6003, pud=10000000824a6003, pmd=1000000097490003, pte=0000000000000000\n[  277.542776][ T9089] Internal error: Oops: 0000000096000007 [#1] PREEMPT SMP\n...\n[  277.544030][ T9089] pstate: 22400005 (nzCv daif +PAN -UAO +TCO -DIT -SSBS BTYPE=--)\n[  277.544037][ T9089] pc : kbase_csf_kcpu_queue_process+0x77c/0x1498 [mali_kbase]\n[  277.544557][ T9089] lr : kbase_csf_kcpu_queue_process+0x778/0x1498 [mali_kbase]\n[  277.545067][ T9089] sp : ffffffc03114bb00\n[  277.545072][ T9089] x29: ffffffc03114bba0 x28: 0000000000000000 x27: 0000000000000028\n[  277.545082][ T9089] x26: ffffffc00f4c7ab8 x25: ffffffc026c8909c x24: ffffffc03c130000\n[  277.545091][ T9089] x23: 0000000000000000 x22: ffffffc00f4c7ab0 x21: ffffffc026c88708\n[  277.545100][ T9089] x20: 0000000000000000 x19: ffffffc026c85000 x18: ffffffd72b9fd940\n[  277.545109][ T9089] x17: 0000000098782e29 x16: 0000000098782e29 x15: 0000007fdbd424c0\n[  277.545117][ T9089] x14: 0000000000000008 x13: ffffffd729c61e08 x12: 80d6166e80ffffff\n[  277.545126][ T9089] x11: ffffffb420354000 x10: ffffffd72b9d2dd0 x9 : ffffff806e16d000\n[  277.545135][ T9089] x8 : ffffff88917ba880 x7 : 0000000000000000 x6 : fffffffdef88cc70\n[  277.545143][ T9089] x5 : 8123000000000000 x4 : ffffff8b4bd26dd0 x3 : 00000000006342e0\n[  277.545151][ T9089] x2 : ffffff806e16d600 x1 : 0000000000000000 x0 : 0000000000000000\n[  277.545161][ T9089] Call trace:\n[  277.545166][ T9089]  kbase_csf_kcpu_queue_process+0x77c/0x1498 [mali_kbase]\n[  277.545675][ T9089]  kbase_csf_kcpu_queue_enqueue+0x1580/0x1a80 [mali_kbase]\n[  277.546182][ T9089]  kbase_ioctl+0x27ec/0x6070 [mali_kbase]\n[  277.546692][ T9089]  __arm64_sys_ioctl+0xa8/0xe4\n[  277.546709][ T9089]  invoke_syscall+0x58/0x118\n[  277.546720][ T9089]  el0_svc_common+0xb4/0xf4\n[  277.546727][ T9089]  do_el0_svc+0x24/0x80\n[  277.546734][ T9089]  el0_svc+0x2c/0x90\n[  277.546744][ T9089]  el0t_64_sync_handler+0x68/0xb4\n[  277.546750][ T9089]  el0t_64_sync+0x1a4/0x1a8\n[  277.546763][ T9089] Code: f9401a60 f85b83a1 97fe0ff0 f94002a8 (b9400703)\n[  277.546770][ T9089] ---[ end trace 0000000000000000 ]---\n[  277.546777][ T9089] Kernel panic - not syncing: Oops: Fatal exception\n```\n\n---\n\nReported: 2026-02-10\nAcknowledged: 2026-02-10\n"
+    },
+    {
+      "id": 3892916467,
+      "number": 23,
+      "title_raw": "[MEDIUM] Bug in OpenMRS under embargo",
+      "title_display": "Bug in OpenMRS under embargo",
+      "severity": "medium",
+      "severity_rank": 2,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "medium"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/23",
+      "created_at": "2026-02-03T19:50:30Z",
+      "updated_at": "2026-02-07T01:19:34Z",
+      "body_markdown": "A vulnerability was discovered by Xint in OpenMRS and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as medium\n\n---\n\nReported: 2026-01-13"
+    },
+    {
+      "id": 3892914919,
+      "number": 22,
+      "title_raw": "[MEDIUM] Bug in OpenMRS under embargo",
+      "title_display": "Bug in OpenMRS under embargo",
+      "severity": "medium",
+      "severity_rank": 2,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "medium"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/22",
+      "created_at": "2026-02-03T19:50:07Z",
+      "updated_at": "2026-02-07T01:19:26Z",
+      "body_markdown": "A vulnerability was discovered by Xint in OpenMRS and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as medium\n\n---\n\nReported: 2026-01-13\n"
+    },
+    {
+      "id": 3892899436,
+      "number": 21,
+      "title_raw": "[CRITICAL] Bug in nginx under embargo",
+      "title_display": "Bug in nginx under embargo",
+      "severity": "critical",
+      "severity_rank": 4,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "critical"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/21",
+      "created_at": "2026-02-03T19:46:24Z",
+      "updated_at": "2026-02-07T01:19:18Z",
+      "body_markdown": "A vulnerability was discovered by Xint in nginx and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as critical\n\n---\n\nReported: 2026-01-14\nAcknowledged: 2026-01-14\n"
+    },
+    {
+      "id": 3892875875,
+      "number": 20,
+      "title_raw": "[LOW] negative-size-memcpy in mruby io_gets",
+      "title_display": "negative-size-memcpy in mruby io_gets",
+      "severity": "low",
+      "severity_rank": 1,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "low"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/20",
+      "created_at": "2026-02-03T19:40:49Z",
+      "updated_at": "2026-02-07T01:19:09Z",
+      "body_markdown": "Vulnerability Details:\n\nA negative size memcpy in mruby io_gets could allow denial of service via attacker controlled calls to gets.\n\nMore details available at https://github.com/mruby/mruby/issues/6646\n\n---\n\nReported: 2025-10-20\nFixed: 2025-10-22\n[Upstream Fix](https://github.com/makesoftwaresafe/mruby/commit/c21604eea68c0b2addbd40e2508b0edc64996eec)\n"
+    },
+    {
+      "id": 3892868970,
+      "number": 19,
+      "title_raw": "[LOW] negative-size-memmove in mruby io_ungetc",
+      "title_display": "negative-size-memmove in mruby io_ungetc",
+      "severity": "low",
+      "severity_rank": 1,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "low"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/19",
+      "created_at": "2026-02-03T19:39:08Z",
+      "updated_at": "2026-02-07T01:19:02Z",
+      "body_markdown": "Vulnerability Details:\n\nA negative-size-memmove in mruby io_ungetc could allow denial of service via attacker controlled calls to `ungetc`.\n\nMore details available at https://github.com/mruby/mruby/issues/6647\n\n---\n\nReported: 2025-10-20\nFixed: 2025-10-22\n[Upstream Fix](https://github.com/makesoftwaresafe/mruby/commit/01ab2ffc29a1f2d67b2e88ec674c5288d5b97aa4)\n"
+    },
+    {
+      "id": 3892854439,
+      "number": 18,
+      "title_raw": "[LOW] out-of-bounds-read in mruby mrb_str_format",
+      "title_display": "out-of-bounds-read in mruby mrb_str_format",
+      "severity": "low",
+      "severity_rank": 1,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "low"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/18",
+      "created_at": "2026-02-03T19:35:55Z",
+      "updated_at": "2026-02-07T01:18:51Z",
+      "body_markdown": "Vulnerability Details:\n\nAn out-of-bounds-read in mruby mrb_str_format could an out of bounds read with certain attacker controlled format string printing.\n\nMore details available at https://github.com/mruby/mruby/issues/6648\n\n---\n\nReported: 2025-10-20\nFixed: 2025-10-22\n[Upstream Fix](https://github.com/makesoftwaresafe/mruby/commit/dee72daf97ccff577d62fe1cdf2e9b1c227fa245)\n"
+    },
+    {
+      "id": 3892840795,
+      "number": 17,
+      "title_raw": "[LOW] memory leak in mruby kset_init_embedded",
+      "title_display": "memory leak in mruby kset_init_embedded",
+      "severity": "low",
+      "severity_rank": 1,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "low"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/17",
+      "created_at": "2026-02-03T19:32:41Z",
+      "updated_at": "2026-02-07T01:18:42Z",
+      "body_markdown": "Vulnerability Details:\n\nA memory leak in mruby kset_init_embedded could allow denial of service via resource exhaustion in some scenarios.\n\nMore details available at https://github.com/mruby/mruby/issues/6645\n\n---\n\nReported: 2025-10-20\nFixed: 2025-10-21\n[Upstream Fix](https://github.com/makesoftwaresafe/mruby/commit/a3797173c2c526a0a40e35ca5a75eb476cac4cb8)\n"
+    },
+    {
+      "id": 3892824403,
+      "number": 16,
+      "title_raw": "[MEDIUM] Buffer-underflow in mruby ary_fill_exec",
+      "title_display": "Buffer-underflow in mruby ary_fill_exec",
+      "severity": "medium",
+      "severity_rank": 2,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "medium"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/16",
+      "created_at": "2026-02-03T19:28:27Z",
+      "updated_at": "2026-02-07T01:18:34Z",
+      "body_markdown": "Vulnerability Details:\n\nA buffer-underflow in mruby ary_fill_exec could allow code execution when calling `__fill_exec` with attacker-controlled arguments on an attacker provided buffer.\n\nMore details available at https://github.com/mruby/mruby/issues/6650\n\n---\n\nReported: 2025-10-20\nFixed: 2025-10-22\n[CVE-2025-12875](https://nvd.nist.gov/vuln/detail/CVE-2025-12875)\n[Upstream Fix](https://github.com/makesoftwaresafe/mruby/commit/93619f06dd378db6766666b30c08978311c7ec94)\n"
+    },
+    {
+      "id": 3892799103,
+      "number": 15,
+      "title_raw": "[CRITICAL] Bug in MariaDB under embargo",
+      "title_display": "Bug in MariaDB under embargo",
+      "severity": "critical",
+      "severity_rank": 4,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "critical"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/15",
+      "created_at": "2026-02-03T19:22:41Z",
+      "updated_at": "2026-02-07T01:18:28Z",
+      "body_markdown": "A vulnerability was discovered by Xint in MariaDB and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as critical.\n\n---\n\nReported: 2025-12-11\nAcknowledged: 2025-12-11\n"
+    },
+    {
+      "id": 3892797552,
+      "number": 14,
+      "title_raw": "[MEDIUM] use-after-realloc in mruby mrb_ary_sort_bang",
+      "title_display": "use-after-realloc in mruby mrb_ary_sort_bang",
+      "severity": "medium",
+      "severity_rank": 2,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "medium"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/14",
+      "created_at": "2026-02-03T19:22:21Z",
+      "updated_at": "2026-02-07T01:18:20Z",
+      "body_markdown": "Vulnerability Details:\n\nA use-after-realloc in mruby mrb_ary_sort_bang could allow denial of service or remote code execution when running certain sorting operations in mruby.\n\nMore details available at https://github.com/mruby/mruby/issues/6649\n\n---\n\nReported: 2025-10-20\nFixed: 2025-10-27\n[CVE-2025-13120](https://nvd.nist.gov/vuln/detail/CVE-2025-13120)\n[Upstream Fix](https://github.com/makesoftwaresafe/mruby/commit/eb398971bfb43c38db3e04528b68ac9a7ce509bc)\n"
+    },
+    {
+      "id": 3892795497,
+      "number": 13,
+      "title_raw": "[CRITICAL] Bug in PostgreSQL under embargo",
+      "title_display": "Bug in PostgreSQL under embargo",
+      "severity": "critical",
+      "severity_rank": 4,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "critical"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/13",
+      "created_at": "2026-02-03T19:21:54Z",
+      "updated_at": "2026-02-07T01:18:09Z",
+      "body_markdown": "A vulnerability was discovered by Xint in PostgreSQL and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as critical.\n\n---\n\nReported: 2025-12-11\nAcknowledged: 2025-12-11\n"
+    },
+    {
+      "id": 3892792740,
+      "number": 12,
+      "title_raw": "[CRITICAL] Bug in Redis under embargo",
+      "title_display": "Bug in Redis under embargo",
+      "severity": "critical",
+      "severity_rank": 4,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "critical"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/12",
+      "created_at": "2026-02-03T19:21:25Z",
+      "updated_at": "2026-02-07T01:18:01Z",
+      "body_markdown": "A vulnerability was discovered by Xint in Redis and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as critical.\n\n---\n\nReported: 2025-12-11\nAcknowledged: 2025-12-11\n"
+    },
+    {
+      "id": 3892787685,
+      "number": 11,
+      "title_raw": "[LOW] Bug in Redis under embargo",
+      "title_display": "Bug in Redis under embargo",
+      "severity": "low",
+      "severity_rank": 1,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "low"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/11",
+      "created_at": "2026-02-03T19:20:03Z",
+      "updated_at": "2026-02-07T01:17:57Z",
+      "body_markdown": "A vulnerability was discovered by Xint in Redis and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as low\n\n---\n\nReported: 2025-10-30\nAcknowledged: 2025-10-31\n"
+    },
+    {
+      "id": 3892786432,
+      "number": 10,
+      "title_raw": "[LOW] Bug in Redis under embargo",
+      "title_display": "Bug in Redis under embargo",
+      "severity": "low",
+      "severity_rank": 1,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "low"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/10",
+      "created_at": "2026-02-03T19:19:47Z",
+      "updated_at": "2026-02-07T01:17:48Z",
+      "body_markdown": "A vulnerability was discovered by Xint in Redis and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as low\n\n---\n\nReported: 2025-10-30\nAcknowledged: 2025-10-31\n"
+    },
+    {
+      "id": 3892778466,
+      "number": 9,
+      "title_raw": "[HIGH] Bug in GNU Global under embargo",
+      "title_display": "Bug in GNU Global under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/9",
+      "created_at": "2026-02-03T19:17:24Z",
+      "updated_at": "2026-02-07T01:17:38Z",
+      "body_markdown": "A vulnerability was discovered by Xint in GNU Global (gtags) and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as High\n\n---\n\nReported: 2025-10-21\nAcknowledged: 2025-10-22"
+    },
+    {
+      "id": 3892775733,
+      "number": 8,
+      "title_raw": "[HIGH] Bug in GNU Global under embargo",
+      "title_display": "Bug in GNU Global under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/8",
+      "created_at": "2026-02-03T19:16:30Z",
+      "updated_at": "2026-02-07T01:17:29Z",
+      "body_markdown": "A vulnerability was discovered by Xint in GNU Global (gtags) and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as High\n\n---\n\nReported: 2025-10-21\nAcknowledged: 2025-10-22\n"
+    },
+    {
+      "id": 3892723855,
+      "number": 7,
+      "title_raw": "[LOW] Bug in apache-commons-compress under embargo",
+      "title_display": "Bug in apache-commons-compress under embargo",
+      "severity": "low",
+      "severity_rank": 1,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "low"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/7",
+      "created_at": "2026-02-03T19:01:39Z",
+      "updated_at": "2026-02-07T01:17:21Z",
+      "body_markdown": "A vulnerability was discovered by Xint in apache-commons-compress and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as low\n\n---\n\nReported: 2025-08-01\nAcknowledged: 2025-08-03"
+    },
+    {
+      "id": 3892723723,
+      "number": 6,
+      "title_raw": "[LOW] Bug in apache-commons-compress under embargo",
+      "title_display": "Bug in apache-commons-compress under embargo",
+      "severity": "low",
+      "severity_rank": 1,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "low"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/6",
+      "created_at": "2026-02-03T19:01:36Z",
+      "updated_at": "2026-02-07T01:17:13Z",
+      "body_markdown": "A vulnerability was discovered by Xint in apache-commons-compress and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as low\n\n---\n\nReported: 2025-08-01\nAcknowledged: 2025-08-03"
+    },
+    {
+      "id": 3892722632,
+      "number": 5,
+      "title_raw": "[LOW] Bug in apache-commons-compress under embargo",
+      "title_display": "Bug in apache-commons-compress under embargo",
+      "severity": "low",
+      "severity_rank": 1,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "low"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/5",
+      "created_at": "2026-02-03T19:01:17Z",
+      "updated_at": "2026-02-07T01:17:06Z",
+      "body_markdown": "A vulnerability was discovered by Xint in apache-commons-compress and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as low\n\n---\n\nReported: 2025-08-01\nAcknowledged: 2025-08-03"
+    },
+    {
+      "id": 3892722300,
+      "number": 4,
+      "title_raw": "[LOW] Bug in apache-commons-compress under embargo",
+      "title_display": "Bug in apache-commons-compress under embargo",
+      "severity": "low",
+      "severity_rank": 1,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "low"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/4",
+      "created_at": "2026-02-03T19:01:11Z",
+      "updated_at": "2026-02-07T01:16:55Z",
+      "body_markdown": "A vulnerability was discovered by Xint in apache-commons-compress and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as low\n\n---\n\nReported: 2025-08-01\nAcknowledged: 2025-08-03"
+    },
+    {
+      "id": 3892721501,
+      "number": 3,
+      "title_raw": "[LOW] Bug in apache-commons-compress under embargo",
+      "title_display": "Bug in apache-commons-compress under embargo",
+      "severity": "low",
+      "severity_rank": 1,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "low"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/3",
+      "created_at": "2026-02-03T19:00:56Z",
+      "updated_at": "2026-02-07T01:16:49Z",
+      "body_markdown": "A vulnerability was discovered by Xint in apache-commons-compress and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as low\n\n---\n\nReported: 2025-08-01\nAcknowledged: 2025-08-03"
+    },
+    {
+      "id": 3892624066,
+      "number": 2,
+      "title_raw": "[MEDIUM] Heap out-of-bounds read in SQLite zipfileGetEntry",
+      "title_display": "Heap out-of-bounds read in SQLite zipfileGetEntry",
+      "severity": "medium",
+      "severity_rank": 2,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "medium"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/2",
+      "created_at": "2026-02-03T18:34:15Z",
+      "updated_at": "2026-02-07T01:16:18Z",
+      "body_markdown": "Vulnerability Details:\n\nA heap out-of-bounds read in SQLite's zipfileGetEntry could allow leaking of sensitive heap data including pointers when attackers can perform SQL queries with the zipfile module enabled (as is default on many platforms).  \n\nThe memcpy in sqlite3/ext/misc/zipfile.c : zipfileGetEntry copies pNew->cds.szCompressed bytes from &aBlob[pNew->iDataOff] without checking that iDataOff + szCompressed ≤ nBlob, enabling an out-of-bounds read.\n\nExample trigger:\n```\nSELECT * FROM zipfile(X'504b03041400000000000000000000000000100000001000000001000100414243434343504b010214001400000000000000000000000000ffff0000ffff000001000000000000000000000000000000000041504b050600000000010001002f000000240000000000');\n```\n\n---\n\nReported: 2025-08-04\nFixed: 2025-08-04\n[Upstream Fix](https://sqlite.org/src/vinfo/642e89191deaf75d?diff=2&proof=858002589)\n"
+    },
+    {
+      "id": 3892584484,
+      "number": 1,
+      "title_raw": "[HIGH] Heap out-of-bounds-write in SQLite zipfileAppendEntry",
+      "title_display": "Heap out-of-bounds-write in SQLite zipfileAppendEntry",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/1",
+      "created_at": "2026-02-03T18:24:31Z",
+      "updated_at": "2026-02-07T01:16:09Z",
+      "body_markdown": "Vulnerability Details:\n\nA heap out of bounds write in SQLite's zipfileAppendEntry could allow code execution when attackers can perform SQL queries with the zip module enabled (as is default on many platforms).\n\nThe call to zipfileSerializeLFH in zipfileAppendEntry writes pCds->nFile bytes of zFile into a fixed-size (ZIPFILE_BUFFER_SIZE=64K) buffer at offset 30 without checking that nFile <= (64K−30). A sufficiently long file name causes a heap buffer overflow.\n\nExample trigger:\n```\nCREATE VIRTUAL TABLE t USING zipfile('out.zip');\nINSERT INTO t(name,mode,mtime,sz,rawdata,data,method) VALUES(printf('%.*c', 65520, 'A'), NULL,0,NULL,NULL,X'00',NULL);\n```\n\n---\n\nReported: 2025-08-04\nFixed: 2025-08-04\n[Upstream Fix](https://sqlite.org/src/vinfo/642e89191deaf75d?diff=2&proof=858002589)\n"
+    }
+  ],
+  "meta": {
+    "open_issues_seen": 41,
+    "wall_items": 41,
+    "severity_conflicts": 0
+  }
+}
