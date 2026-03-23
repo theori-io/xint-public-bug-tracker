@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-23T21:09:46.824Z",
+  "generated_at": "2026-03-23T21:10:40.014Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
   "count": 43,
   "items": [
@@ -17,8 +17,8 @@
       ],
       "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/43",
       "created_at": "2026-03-23T21:09:32Z",
-      "updated_at": "2026-03-23T21:09:34Z",
-      "body_markdown": "A vulnerability was discovered by Xint in XNU and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as medium.\n\n---\n\nReported: 2026-03-12"
+      "updated_at": "2026-03-23T21:10:30Z",
+      "body_markdown": "A vulnerability was discovered by Xint in XNU and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as medium.\n\n---\n\nReported: 2026-03-12\nAcknowledged: 2026-03-13"
     },
     {
       "id": 4072508405,
