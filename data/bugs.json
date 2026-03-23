@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-03-23T21:10:40.014Z",
+  "generated_at": "2026-03-23T21:13:24.458Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 43,
+  "count": 44,
   "items": [
+    {
+      "id": 4123770056,
+      "number": 44,
+      "title_raw": "[MEDIUM] Bug in XNU under embargo",
+      "title_display": "Bug in XNU under embargo",
+      "severity": "medium",
+      "severity_rank": 2,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "medium"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/44",
+      "created_at": "2026-03-23T21:13:08Z",
+      "updated_at": "2026-03-23T21:13:12Z",
+      "body_markdown": "A vulnerability was discovered by Xint in XNU and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as medium.\n\n---\n\nReported: 2026-03-12\nAcknowledged: 2026-03-13\n"
+    },
     {
       "id": 4123752840,
       "number": 43,
@@ -736,8 +753,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 43,
-    "wall_items": 43,
+    "open_issues_seen": 44,
+    "wall_items": 44,
     "severity_conflicts": 0
   }
 }
