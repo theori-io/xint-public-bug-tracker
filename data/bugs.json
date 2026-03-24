@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T18:02:33.701Z",
+  "generated_at": "2026-03-24T18:06:04.282Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
   "count": 48,
   "items": [
@@ -476,8 +476,8 @@
       ],
       "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/21",
       "created_at": "2026-02-03T19:46:24Z",
-      "updated_at": "2026-03-24T18:02:23Z",
-      "body_markdown": "A vulnerability was discovered by Xint in nginx and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high\n\n---\n\nReported: 2026-01-14\nAcknowledged: 2026-01-14\n"
+      "updated_at": "2026-03-24T18:05:49Z",
+      "body_markdown": "### Summary\n\nRoot Cause: When an mp4 file has a stco/co64 atom with entries=0, the\ncode still tries to read and write chunk offset data that doesn't exist.\n\n### Details\n\nAn attacker controlled mp4 file can cause an OOB read followed by an OOB\nwrite in both `ngx_http_mp4_update_stco_atom` and\n`ngx_http_mp4_update_co64_atom`. When an stco or co64 atom has\nentries=0, the code still unconditionally reads the first chunk_offset\nfrom the buffer.\n\nBelow is the vulnerable code:\n\n```c\n     data->pos += trak->start_chunk * sizeof(uint32_t);\n\n     chunk_offset = ngx_mp4_get_32value(data->pos);          // OOB READ\n     samples_size = trak->start_chunk_samples_size;\n\n     if (chunk_offset > (uint64_t) mp4->end - samples_size\n         || chunk_offset + samples_size > NGX_MAX_UINT32_VALUE)\n     {\n         ngx_log_error(NGX_LOG_ERR, mp4->file.log, 0,\n                       \"too large chunk offset in \\\"%s\\\"\",\n                       mp4->file.name.data);\n         return NGX_ERROR;\n     }\n\n     trak->start_offset = chunk_offset + samples_size;\n     ngx_mp4_set_32value(data->pos, trak->start_offset);             //\nOOB WRITE\n```\n\n### PoC\n\nThis can be triggered on the latest version of nginx using any config\nthat serves attacker-controlled mp4 files. Example config:\n```\nworker_processes 1;\ndaemon off;\nerror_log /dev/stderr debug;\n\nevents {}\n\nhttp {\n     access_log /dev/stdout;\n\n     server {\n         listen 8080;\n         server_name localhost;\n\n         location /videos/ {\n             alias /srv/videos/;\n             mp4;\n         }\n     }\n}\n```\n\n\n---\n\nReported: 2026-01-14\nAcknowledged: 2026-01-14\nFixed: 2026-03-04\n[CVE-2026-32647](https://nvd.nist.gov/vuln/detail/CVE-2026-32647)\n[Upstream fix](https://github.com/nginx/nginx/commit/7725c372c2fe11ff908b1d6138be219ad694c42f)"
     },
     {
       "id": 3892875875,
