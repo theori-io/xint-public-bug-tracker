@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T03:48:32.031Z",
+  "generated_at": "2026-03-24T03:55:02.644Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
   "count": 48,
   "items": [
@@ -612,8 +612,8 @@
       ],
       "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/13",
       "created_at": "2026-02-03T19:21:54Z",
-      "updated_at": "2026-03-24T03:48:20Z",
-      "body_markdown": "A vulnerability was discovered by Xint in PostgreSQL and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as critical.\n\n---\n\nReported: 2025-12-11\nAcknowledged: 2025-12-11\n"
+      "updated_at": "2026-03-24T03:54:53Z",
+      "body_markdown": "**Location:** `contrib/pgcrypto/pgp-pubdec.c:226:229` in function `pgp_parse_pubenc_sesskey`\n\n\n### Description\n\nThe function copies the decrypted session key into a fixed-size buffer without bounding the copy length. After unpadding the PKCS#1 v1.5 block, it sets `ctx->sess_key_len = msglen - 3` and does `memcpy(ctx->sess_key, msg + 1, ctx->sess_key_len)` (`contrib/pgcrypto/pgp-pubdec.c:227-229`). However, `ctx->sess_key` is only `PGP_MAX_KEY` (32) bytes long (`contrib/pgcrypto/pgp.h:171-172`, `contrib/pgcrypto/pgp.h:112`). Since `msglen` is derived from the RSA/ElGamal plaintext length and `control_cksum()` imposes no upper bound (`contrib/pgcrypto/pgp-pubdec.c:80-93`), an attacker can supply a crafted ciphertext and matching key to make `ctx->sess_key_len` much larger than 32, causing an out-of-bounds write.\n\n### Code Context\n\n```\n\tctx->cipher_algo = *msg;\n\tctx->sess_key_len = msglen - 3;\n\tmemcpy(ctx->sess_key, msg + 1, ctx->sess_key_len);\n\n```\n\n---\n\nReported: 2025-12-11\nAcknowledged: 2025-12-11\nFixed: 2026-02-08\n[CVE-2026-2005](https://nvd.nist.gov/vuln/detail/CVE-2026-2005)\n[Upstream fix](https://github.com/postgres/postgres/commit/379695d3cc70d040b547d912ce4842090d917ece)\n"
     },
     {
       "id": 3892792740,
