@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T16:08:49.250Z",
+  "generated_at": "2026-03-24T16:09:15.350Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
   "count": 48,
   "items": [
@@ -476,7 +476,7 @@
       ],
       "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/21",
       "created_at": "2026-02-03T19:46:24Z",
-      "updated_at": "2026-03-24T16:08:36Z",
+      "updated_at": "2026-03-24T16:09:02Z",
       "body_markdown": "A vulnerability was discovered by Xint in nginx and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high\n\n---\n\nReported: 2026-01-14\nAcknowledged: 2026-01-14\n"
     },
     {
