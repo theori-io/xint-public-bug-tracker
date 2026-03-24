@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bugs discovered by Xint</title>
     <meta name="description" content="Public bug wall of Xint findings." />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css" />
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
@@ -65,10 +66,12 @@
 
       <p id="results-summary" class="results-summary" aria-live="polite"></p>
       <section id="cards" class="cards" aria-label="bugs"></section>
-      <nav id="pagination" class="pagination" aria-label="Pagination"></nav>
       <p id="error-message" class="error" hidden></p>
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.7/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.4/purify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
     <script type="module" src="assets/app.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 const DATA_URL = 'data/bugs.json';
-const ITEMS_PER_PAGE = 20;
+const ITEMS_BATCH = 20;
 
 const severityRank = {
   unknown: 0,
@@ -12,22 +12,45 @@ const severityRank = {
 const state = {
   raw: [],
   filtered: [],
-  paged: [],
   q: '',
   sev: 'all',
   sort: 'severity_desc',
-  page: 1,
+  visibleCount: ITEMS_BATCH,
 };
 
 const el = {
   cards: document.querySelector('#cards'),
-  pagination: document.querySelector('#pagination'),
   summary: document.querySelector('#results-summary'),
   error: document.querySelector('#error-message'),
   search: document.querySelector('#search-input'),
   severity: document.querySelector('#severity-select'),
   sort: document.querySelector('#sort-select'),
 };
+
+/* ── Markdown rendering ── */
+
+marked.use({
+  gfm: true,
+  breaks: true,
+  renderer: {
+    code({ text, lang }) {
+      const language = lang && hljs.getLanguage(lang) ? lang : null;
+      const highlighted = language
+        ? hljs.highlight(text, { language }).value
+        : hljs.highlightAuto(text).value;
+      const langClass = language ? ` language-${language}` : '';
+      return `<pre><code class="hljs${langClass}">${highlighted}</code></pre>`;
+    },
+  },
+});
+
+function renderMarkdown(raw) {
+  if (!raw) return '<p>No description provided.</p>';
+  const html = marked.parse(raw);
+  return DOMPurify.sanitize(html, { ADD_ATTR: ['class'] });
+}
+
+/* ── Helpers ── */
 
 function formatDate(iso) {
   if (!iso) return 'Unknown date';
@@ -75,13 +98,6 @@ function applyFilters() {
     }),
     state.sort,
   );
-
-  const totalPages = Math.max(1, Math.ceil(state.filtered.length / ITEMS_PER_PAGE));
-  if (state.page > totalPages) state.page = totalPages;
-  if (state.page < 1) state.page = 1;
-
-  const start = (state.page - 1) * ITEMS_PER_PAGE;
-  state.paged = state.filtered.slice(start, start + ITEMS_PER_PAGE);
 }
 
 function escapeHtml(text) {
@@ -93,24 +109,23 @@ function escapeHtml(text) {
     .replaceAll("'", '&#039;');
 }
 
+/* ── Rendering ── */
+
 function renderCards() {
   if (state.filtered.length === 0) {
     el.cards.innerHTML = '<p>No matching findings.</p>';
     el.summary.textContent = '0 findings';
-    el.pagination.innerHTML = '';
     return;
   }
 
-  const startIndex = (state.page - 1) * ITEMS_PER_PAGE + 1;
-  const endIndex = startIndex + state.paged.length - 1;
-  el.summary.textContent = `${state.filtered.length} findings • showing ${startIndex}-${endIndex}`;
+  const visible = state.filtered.slice(0, state.visibleCount);
+  el.summary.textContent = `Showing ${visible.length} of ${state.filtered.length} findings`;
 
-  const markup = state.paged
-    .map((item) => {
+  const markup = visible
+    .map((item, idx) => {
       const sev = item.severity || 'unknown';
       const sevLabel = sev.toUpperCase();
       const title = escapeHtml(item.title_display || item.title_raw || 'Untitled issue');
-      const body = escapeHtml(item.body_markdown || 'No description provided.');
       const created = formatDate(item.created_at);
       const updated = formatDate(item.updated_at);
       const openedLabel = escapeHtml(`${created}`);
@@ -118,7 +133,7 @@ function renderCards() {
       const issueNumber = item.number ? `#${item.number}` : '';
 
       return `
-        <article class="card">
+        <article class="card" data-index="${idx}">
           <button class="card-head" type="button" aria-expanded="false">
             <span class="sev sev-${sev}">${sevLabel}</span>
             <h2 class="title">${title}</h2>
@@ -126,7 +141,7 @@ function renderCards() {
             <span class="caret" aria-hidden="true">&#8250;</span>
           </button>
           <div class="card-body" hidden>
-            <pre class="body-text">${body}</pre>
+            <div class="body-text markdown-body"></div>
             <p class="meta">
               <span>${issueNumber} opened ${created}, updated ${updated}</span>
               <a href="${issueLink}" target="_blank" rel="noopener noreferrer">View on GitHub</a>
@@ -137,76 +152,86 @@ function renderCards() {
     })
     .join('');
 
-  el.cards.innerHTML = markup;
+  el.cards.innerHTML = markup + '<div id="scroll-sentinel"></div>';
 
   for (const card of el.cards.querySelectorAll('.card')) {
     const button = card.querySelector('.card-head');
     const body = card.querySelector('.card-body');
+    const markdownDiv = card.querySelector('.markdown-body');
+    const idx = Number(card.dataset.index);
+
     button.addEventListener('click', () => {
       const expanded = button.getAttribute('aria-expanded') === 'true';
       button.setAttribute('aria-expanded', String(!expanded));
       body.hidden = expanded;
       card.toggleAttribute('open', !expanded);
+
+      // Lazy render markdown on first expand
+      if (!expanded && !card.dataset.rendered) {
+        const item = state.filtered[idx];
+        markdownDiv.innerHTML = renderMarkdown(item?.body_markdown);
+        card.dataset.rendered = '1';
+      }
     });
   }
 }
 
-function renderPagination() {
-  if (state.filtered.length === 0) {
-    el.pagination.innerHTML = '';
+/* ── Infinite scroll ── */
+
+let observer = null;
+
+function setupScrollObserver() {
+  if (observer) observer.disconnect();
+
+  const sentinel = document.querySelector('#scroll-sentinel');
+  if (!sentinel) return;
+
+  if (state.visibleCount >= state.filtered.length) {
+    sentinel.remove();
     return;
   }
 
-  const totalPages = Math.max(1, Math.ceil(state.filtered.length / ITEMS_PER_PAGE));
-  if (totalPages === 1) {
-    el.pagination.innerHTML = '';
-    return;
-  }
+  observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        state.visibleCount = Math.min(
+          state.visibleCount + ITEMS_BATCH,
+          state.filtered.length,
+        );
+        render();
+      }
+    },
+    { rootMargin: '200px' },
+  );
 
-  const pages = [];
-  pages.push(`<button type="button" data-page="${state.page - 1}" ${state.page === 1 ? 'disabled' : ''}>Prev</button>`);
-
-  for (let page = 1; page <= totalPages; page += 1) {
-    const current = page === state.page ? 'aria-current="page"' : '';
-    pages.push(`<button type="button" data-page="${page}" ${current}>${page}</button>`);
-  }
-
-  pages.push(`<button type="button" data-page="${state.page + 1}" ${state.page === totalPages ? 'disabled' : ''}>Next</button>`);
-
-  el.pagination.innerHTML = pages.join('');
-
-  for (const btn of el.pagination.querySelectorAll('button[data-page]')) {
-    btn.addEventListener('click', () => {
-      const next = Number(btn.getAttribute('data-page'));
-      if (!Number.isFinite(next)) return;
-      state.page = next;
-      render();
-    });
-  }
+  observer.observe(sentinel);
 }
+
+/* ── Main render + events ── */
 
 function render() {
   applyFilters();
   renderCards();
-  renderPagination();
+  setupScrollObserver();
 }
 
 function bindEvents() {
   el.search.addEventListener('input', (event) => {
     state.q = event.target.value;
-    state.page = 1;
+    state.visibleCount = ITEMS_BATCH;
     render();
   });
 
   el.severity.addEventListener('change', (event) => {
     state.sev = event.target.value;
-    state.page = 1;
+    state.visibleCount = ITEMS_BATCH;
     render();
+    window.scrollTo(0, 0);
   });
 
   el.sort.addEventListener('change', (event) => {
     state.sort = event.target.value;
-    state.page = 1;
+    state.visibleCount = ITEMS_BATCH;
     render();
   });
 }
