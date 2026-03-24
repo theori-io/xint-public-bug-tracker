@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T17:56:01.601Z",
+  "generated_at": "2026-03-24T17:58:40.403Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
   "count": 48,
   "items": [
@@ -578,8 +578,8 @@
       ],
       "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/15",
       "created_at": "2026-02-03T19:22:41Z",
-      "updated_at": "2026-03-24T17:55:51Z",
-      "body_markdown": "A vulnerability was discovered by Xint in MariaDB and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as critical.\n\n---\n\nReported: 2025-12-11\nAcknowledged: 2025-12-11\n"
+      "updated_at": "2026-03-24T17:58:27Z",
+      "body_markdown": "MariaDB’s JSON schema validation logic (`JSON_SCHEMA_VALID`) contains a heap overflow when parsing crafted enum definitions stored in user variables. By grooming user-defined variables on the server heap, an attacker can partially overwrite adjacent metadata, pivot a user-variable value pointer to arbitrary process memory, and read/write privileged structures without authentication bypass.\n`json_get_normalized_string` allocates a local `DYNAMIC_STRING` via `init_dynamic_string(&a_res, NULL, 0, 0)` (default capacity 128) and copies `je->value_len` bytes into `a_res.str` with `strncpy` when normalizing JSON strings. Long string inputs exceed the fixed 128-byte buffer, causing a heap overflow.\n\n```c++\nvoid json_get_normalized_string(json_engine_t *je, String *res,\n                                int *error, MEM_ROOT *current_mem_root,\n                                json_engine_t *temp_je,\n                                MEM_ROOT_DYNAMIC_ARRAY *stack)\n{\n  ...\n  DYNAMIC_STRING a_res;\n\n  if (init_dynamic_string(&a_res, NULL, 0, 0))\n    goto error;\n  ...\n  else if(je->value_type == JSON_VALUE_STRING)\n  {\n    strncpy((char*)a_res.str, val.ptr(), je->value_len);\n    a_res.length= je->value_len;\n  }\n  ...\n}\n```\n`mariadb/mariadb-server/sql/json_schema_helper.cc:33-77`\n\n---\n\nReported: 2025-12-11\nAcknowledged: 2025-12-11\n[CVE-2026-32710](https://nvd.nist.gov/vuln/detail/CVE-2026-32710)\n[Upstream fix](https://github.com/MariaDB/server/commit/93ef1236002fb42725770f076e7be712c87ea403)\n"
     },
     {
       "id": 3892797552,
