@@ -103,6 +103,47 @@ body {
   line-height: 1.6;
 }
 
+.hero {
+  position: relative;
+}
+
+.cta-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.42rem 1rem;
+  background: transparent;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid color-mix(in oklab, var(--primary) 40%, var(--border));
+  border-radius: var(--radius);
+  transition: background 160ms ease, border-color 160ms ease;
+}
+
+.cta-button:hover {
+  background: color-mix(in oklab, var(--primary) 6%, transparent);
+  border-color: color-mix(in oklab, var(--primary) 65%, var(--border));
+}
+
+.cta-button:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--ring) 70%, var(--primary) 30%);
+  outline-offset: 2px;
+}
+
+.cta-arrow {
+  font-size: 1.1em;
+  transition: transform 160ms ease;
+}
+
+.cta-button:hover .cta-arrow {
+  transform: translateX(2px);
+}
+
 .controls {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -364,5 +405,10 @@ select:focus-visible,
     width: 100%;
     margin-left: calc(76px + 0.8rem);
     margin-top: -0.15rem;
+  }
+
+  .cta-button {
+    position: static;
+    margin-bottom: 1rem;
   }
 }
