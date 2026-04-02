@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T18:28:28.766Z",
+  "generated_at": "2026-04-02T19:30:30.883Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
   "count": 48,
   "items": [
@@ -312,8 +312,8 @@
     {
       "id": 3959535096,
       "number": 30,
-      "title_raw": "[HIGH] Bug in CUPS under embargo",
-      "title_display": "Bug in CUPS under embargo",
+      "title_raw": "[HIGH] Heap based overflow in CUPS `get_options()`",
+      "title_display": "Heap based overflow in CUPS `get_options()`",
       "severity": "high",
       "severity_rank": 3,
       "severity_conflict": false,
@@ -323,7 +323,7 @@
       ],
       "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/30",
       "created_at": "2026-02-18T19:56:31Z",
-      "updated_at": "2026-02-18T23:44:25Z",
+      "updated_at": "2026-04-02T19:30:17Z",
       "body_markdown": "A vulnerability was discovered by Xint in CUPS and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as HIGH\n\n---\n\nReported: 2026-02-12\n[Acknowledged: 2026-02-13]\n"
     },
     {
