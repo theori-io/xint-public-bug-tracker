@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-04-13T18:52:07.212Z",
+  "generated_at": "2026-04-29T17:46:38.222Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 49,
+  "count": 50,
   "items": [
+    {
+      "id": 4352545686,
+      "number": 50,
+      "title_raw": "[CRITICAL] LPE in Linux due to authencesn logic flaw",
+      "title_display": "LPE in Linux due to authencesn logic flaw",
+      "severity": "critical",
+      "severity_rank": 4,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "critical"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/50",
+      "created_at": "2026-04-29T17:46:23Z",
+      "updated_at": "2026-04-29T17:46:26Z",
+      "body_markdown": "Vulnerability Details:\n\nA logic bug in the Linux kernel's `authencesn` cryptographic template allows an unprivileged local user trigger a deterministic, controlled 4-byte write into the page cache of any readable file on the system. This can lead to local privilege escalation to root.\n\nThis affects Linux kernel versions ~4.18 to  6.18. Notably a single deterministic exploit script can work against all versions.\n\nMore information available at https://copy.fail/\n\n---\n\nReported: 2026-03-23\nFixed: 2026-04-01\n[CVE-2026-31431](https://www.cve.org/CVERecord?id=CVE-2026-31431)\n[Upstream Fix](https://github.com/torvalds/linux/commit/a664bf3d603dc3bdcf9ae47cc21e0daec706d7a5)\n"
+    },
     {
       "id": 4246456075,
       "number": 49,
@@ -838,8 +855,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 49,
-    "wall_items": 49,
+    "open_issues_seen": 50,
+    "wall_items": 50,
     "severity_conflicts": 0
   }
 }
