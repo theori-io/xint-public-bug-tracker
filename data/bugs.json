@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T17:46:38.222Z",
+  "generated_at": "2026-05-28T12:47:24.651Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
   "count": 50,
   "items": [
@@ -119,8 +119,8 @@
       ],
       "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/44",
       "created_at": "2026-03-23T21:13:08Z",
-      "updated_at": "2026-03-23T21:13:12Z",
-      "body_markdown": "A vulnerability was discovered by Xint in XNU and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as medium.\n\n---\n\nReported: 2026-03-12\nAcknowledged: 2026-03-13\n"
+      "updated_at": "2026-05-28T12:47:11Z",
+      "body_markdown": "## Summary\n\nCreating an IPsec policy on a PF_KEY socket can trigger a heap out-of-bounds write in the XNU Kernel as the root user.\n\n## Details\n\nThe `key_sp2msg` function in `xnu/bsd/netkey/key.c` serializes an IPsec policy into an mbuf, then incorrectly advances the buffer pointer by `src.ss_len` instead of `dst.ss_len`. The total buffer size is computed from src + dst lengths, so when there are multiple ipsecrequest entries, subsequent writes exceed the allocated buffer and trigger an out-of-bounds kernel heap write.\n\n## Proof of Concept\n\n[627.c](https://github.com/user-attachments/files/28347441/627.c)\n[panic.txt](https://github.com/user-attachments/files/28347443/panic.txt)\n\n## Impact\n\nOut-of-bounds write in kernel heap mbuf memory during PF_KEY message construction can corrupt adjacent memory, potentially leading to kernel panic or code execution. Root access is required to install IPsec policies, but no other entitlements are required.\n\n## Timeline\n\nReported: 2026-03-12\nAcknowledged: 2026-03-13\nFixed: [2026-05-11](https://support.apple.com/en-us/127115)\n[CVE-2026-28972](https://www.cve.org/CVERecord?id=CVE-2026-28972)"
     },
     {
       "id": 4123752840,
