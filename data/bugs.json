@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T12:59:00.982Z",
+  "generated_at": "2026-05-28T12:59:22.376Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
   "count": 50,
   "items": [
@@ -57,8 +57,8 @@
     {
       "id": 4123790509,
       "number": 47,
-      "title_raw": "[HIGH] Bug in XNU under embargo",
-      "title_display": "Bug in XNU under embargo",
+      "title_raw": "[HIGH] sysv_msg queue hijack in XNU",
+      "title_display": "sysv_msg queue hijack in XNU",
       "severity": "high",
       "severity_rank": 3,
       "severity_conflict": false,
@@ -68,7 +68,7 @@
       ],
       "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/47",
       "created_at": "2026-03-23T21:17:02Z",
-      "updated_at": "2026-05-28T12:58:48Z",
+      "updated_at": "2026-05-28T12:59:12Z",
       "body_markdown": "## Summary\n\n`msgctl()` has a race condition allowing a process to hijack sysv_msg queues during creation.\n\n## Details\n\nThe `IPC_SET` case of `msgctl()` drops the `SYSV_MSG_SUBSYS` mutex and reacquires it. During the unlock window, another thread can perform `IPC_RMID` and free the slot, then a `msgget` can reuse the same index. After relocking, msgctl modifies the permission fields based on the earlier authorization check for the old queue, altering the permissions for the newly allocated queue.\n\n1. Thread A: `msgctl(Q1, IPC_SET)` passes auth check, unlocks for copyin\n2. Thread B: `msgctl(Q1, IPC_RMID)` frees slot (sets msg_qbytes=0)\n3. Thread C: `msgget()` reuses slot for new queue Q2 with new owner\n4. Thread A: relocks and writes attacker's uid/gid/mode to Q2\n\n## Proof of Concept\n\n[47.c](https://github.com/user-attachments/files/28347777/47.c)\n\n## Impact\n\nAn unprivileged userspace process can read and write sysv_msg queues created by another process.\n\n## Timeline\n\nReported: 2026-03-12\nAcknowledged: 2026-03-13\nFixed: [2026-05-11](https://support.apple.com/en-us/127115)\n[CVE-2026-28986](https://www.cve.org/CVERecord?id=CVE-2026-28986)"
     },
     {
