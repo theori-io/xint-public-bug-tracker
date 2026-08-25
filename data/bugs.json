@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T16:20:35.923Z",
+  "generated_at": "2026-08-25T16:21:11.595Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
   "count": 51,
   "items": [
@@ -255,8 +255,8 @@
       ],
       "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/37",
       "created_at": "2026-02-20T21:18:23Z",
-      "updated_at": "2026-08-25T16:20:26Z",
-      "body_markdown": "A vulnerability was discovered by Xint in the Android LWIS driver and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high\n\n---\n\nReported: 2026-02-20\nAcknowledged: 2026-02-20\n"
+      "updated_at": "2026-08-25T16:21:01Z",
+      "body_markdown": "### Summary\n\nRoot Cause: `lwis_device_external_event_emit` drops\n`lwis_client->event_lock` and then keeps using the raw `lwis_client`\npointer, which a concurrent close can free in the meantime.\n\n### Details\n\nIn `google-modules/lwis/lwis_event.c`, the function iterates\n`lwis_dev->clients` without holding a lock that protects either the list\nor client lifetime (lines 1074-1079), reads `client_event_state` under\n`lwis_client->event_lock` (lines 1080-1090), then drops that lock and\ncalls `client_event_push_back(lwis_client, ...)` (line 1102). If the\nclient is concurrently closed and freed via\n`lwis_release -> release_client`\n(`google-modules/lwis/lwis_device.c:251-307`, 221-246), the\n`lwis_client` pointer is dangling. `client_event_push_back`\n(`lwis_event.c:569+`) dereferences it to take `event_lock` and write to\nits `event_queue`, and the subsequent\n`lwis_transaction_event_trigger(lwis_client, ...)` at line 1112\ndereferences the freed pointer again.\n\nThe trigger is:\n\n- A process opens LWIS subscriber and trigger devices (`/dev/lwis*`) and\n  issues `LWIS_IOC_EVENT_CONTROL_SET` to enable\n  `LWIS_EVENT_CONTROL_FLAG_QUEUE_ENABLE` for a cross-device event,\n  reaching `lwis_client_event_control_set -> client_event_subscribe`.\n  This sets up the subscription so that `subscribe_work_func` will call\n  `lwis_device_external_event_emit` on the subscriber device when the\n  trigger device emits the event.\n- An external event emission occurs, for example via hardware IRQ or a\n  driver path leading to `device_event_emit_impl` on the trigger device,\n  causing `subscribe_work_func` to invoke\n  `lwis_device_external_event_emit(subscriber_dev, event_id, ...)`.\n- Race window: after the function determines `emit = true` and unlocks\n  `lwis_client->event_lock` (line 1090), but before it calls\n  `client_event_push_back` (line 1102), userspace closes the subscriber\n  client FD, executing\n  `lwis_release -> release_client -> cleanup_client -> list_del ->\n  kfree(lwis_client)`.\n\nA local app with access to LWIS device nodes can therefore trigger a\nkernel use-after-free write, likely leading to kernel crash and\npotentially privilege escalation.\n\n---\n\nReported: 2026-02-20\nAcknowledged: 2026-02-20\nFixed: 2026-06-05\n[CVE-2026-0143](https://nvd.nist.gov/vuln/detail/CVE-2026-0143)\n[Pixel Update Bulletin](https://source.android.com/docs/security/bulletin/pixel/2026/2026-06-01)\n"
     },
     {
       "id": 3970004568,
