@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T16:17:14.270Z",
+  "generated_at": "2026-08-25T16:19:10.197Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
   "count": 51,
   "items": [
@@ -425,8 +425,8 @@
       ],
       "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/27",
       "created_at": "2026-02-18T18:57:37Z",
-      "updated_at": "2026-08-25T16:17:00Z",
-      "body_markdown": "A vulnerability was discovered by Xint in Android mediaextractor and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high\n\n---\n\nReported: 2026-02-16\nAcknowledged: 2026-02-16\n"
+      "updated_at": "2026-08-25T16:18:57Z",
+      "body_markdown": "### Summary\n\nRoot Cause: The big-endian PCM conversion in `MatroskaSource::read` adds\na byte-based `range_offset()` to a `uint16_t*`, moving the start pointer\nby twice as many bytes as intended and writing past the end of the\nbuffer.\n\n### Details\n\nIn `frameworks/av/media/module/extractors/mkv/MatroskaExtractor.cpp`,\nthe endian-swap loop at lines 1109-1115 advances a `uint16_t*` by\n`frame->range_offset()`, which is a byte count. The effective start is\ntherefore `base + 2 * range_offset`, while the loop still writes\n`frame->range_length() / 2` words. Because the valid region after\n`set_range` ends at the buffer's end, this overruns the allocation by\nexactly `range_offset` bytes.\n\n`range_offset` is non-zero whenever the track is encrypted in a WebM\ncontainer: `setWebmBlockCryptoInfo` (lines 651-776) sets it to 1, 9, or\n`10 + 4*N` (lines 732, 755, 775).\n\nThe conditions are:\n\n- Container EBML docType is `\"webm\"`, so `mIsWebm` is true (constructor,\n  lines 1353-1355).\n- The audio track has CodecID `A_PCM/INT/BIG` with BitDepth 16, so\n  `addTracks` sets MIME `audio/raw`,\n  `AMEDIAFORMAT_KEY_PCM_BIG_ENDIAN=1` and\n  `AMEDIAFORMAT_KEY_BITS_PER_SAMPLE=16` (lines 2180-2187, 2217-2220).\n- The track has a ContentEncoding with Encryption (`initTrackInfo`,\n  lines 1917-1939), so `readBlock` invokes `setWebmBlockCryptoInfo`\n  (lines 842-846).\n- A subsequent `MatroskaSource::read()` reaches the PCM path\n  (`mType == PCM`) and runs the faulty loop.\n\nCrafting the encryption header to use partitioned mode with many\npartitions allows overflows of roughly 1030 bytes.\n\nPlaying a crafted media file corrupts heap memory in the mediaextractor\nprocess; this is reachable, for example, by playing a `.webm` received\nfrom a messaging app.\n\n---\n\nReported: 2026-02-16\nAcknowledged: 2026-02-16\nFixed: TODO\n"
     },
     {
       "id": 3959311703,
