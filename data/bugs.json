@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T16:19:38.080Z",
+  "generated_at": "2026-08-25T16:20:06.168Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
   "count": 51,
   "items": [
@@ -306,8 +306,8 @@
       ],
       "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/34",
       "created_at": "2026-02-20T04:25:54Z",
-      "updated_at": "2026-08-25T16:19:25Z",
-      "body_markdown": "A vulnerability was discovered by Xint in the Android LWIS driver and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high\n\n---\n\nReported: 2026-02-19\nAcknowledged: 2026-02-19\n"
+      "updated_at": "2026-08-25T16:19:53Z",
+      "body_markdown": "### Summary\n\nRoot Cause: `lwis_io_buffer_write` copies user-provided bytes into a\nDMA-buf vmap at `kernel_address + offset` without ever checking that\n`offset + size_in_bytes` falls inside the mapped buffer.\n\n### Details\n\nIn `google-modules/lwis/lwis_io_buffer.c`, `lwis_io_buffer_write` (lines\n24-31) performs `memcpy(kernel_address + offset, bytes, size_in_bytes)`\nwith no bounds check. In the transaction and periodic IO paths,\n`construct_io_entry` sets up the mapping and deep-copies the bytes, but\nnever validates size or offset against the `dma_buf` length, so the\nwrite can land beyond the DMA buffer's mapped region.\n\nThe trigger is:\n\n- Open the LWIS device and submit a transaction or periodic IO via\n  `LWIS_CMD_TRANSACTION_SUBMIT` (or equivalent), with an IO entry of\n  type `LWIS_IO_ENTRY_WRITE_TO_BUFFER`.\n- `fd`: a valid `dma_buf` file descriptor, so that `dma_buf_get`,\n  `vmap` and `begin_cpu_access` all succeed in `construct_io_entry`.\n- `bytes`: a userspace pointer to at least `size_in_bytes` bytes;\n  `construct_io_entry` does `kmalloc(size_in_bytes)` and\n  `copy_from_user`.\n- `size_in_bytes`: small enough that the allocation succeeds (a few KB\n  to MB).\n- `offset`: chosen so that `offset + size_in_bytes` exceeds the\n  `dma_buf`'s true size.\n\n`construct_io_entry` then prepares a `struct pdma_buffer` with an\n`iosys_map`, and after dispatch `lwis_io_buffer_write` copies past the\nend of the mapping. The attacker writes controlled data at an arbitrary\nrelative offset from the vmap base, which from a privileged camera HAL\nprocess is a kernel privilege escalation primitive.\n\nThe synchronous `reg_io` path also accepts `WRITE_TO_BUFFER` but does\nnot prepare the mapping, leading to an immediate invalid pointer\ndereference and an unsafe `memcpy` from a userspace pointer.\n\n---\n\nReported: 2026-02-19\nAcknowledged: 2026-02-19\nFixed: 2026-06-05\n[CVE-2026-0138](https://nvd.nist.gov/vuln/detail/CVE-2026-0138)\n[Pixel Update Bulletin](https://source.android.com/docs/security/bulletin/pixel/2026/2026-06-01)\n"
     },
     {
       "id": 3960441309,
