@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T16:15:55.911Z",
+  "generated_at": "2026-08-25T16:16:48.733Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
   "count": 51,
   "items": [
@@ -442,8 +442,8 @@
       ],
       "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/26",
       "created_at": "2026-02-18T18:56:13Z",
-      "updated_at": "2026-08-25T16:15:41Z",
-      "body_markdown": "A vulnerability was discovered by Xint in Android's Bluetooth service and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as high.\n\n---\n\nReported: 2026-02-15\nAcknowledged: 2026-02-15\n\n"
+      "updated_at": "2026-08-25T16:16:34Z",
+      "body_markdown": "### Summary\n\nRoot Cause: `l2c_fcr_clone_buf` computes its allocation size in a 16-bit\ninteger, so a large `no_of_bytes` wraps the sum and produces an\nundersized buffer that the following `memcpy` overflows.\n\n### Details\n\nIn `packages/modules/Bluetooth/system/stack/l2cap/l2c_fcr.cc`, the\nallocation size is computed as\n`buf_size = no_of_bytes + sizeof(BT_HDR) + new_offset + L2CAP_FCS_LEN`.\nWhen `no_of_bytes` is large the sum exceeds 65535 and wraps, so\n`osi_malloc(buf_size)` returns a very small allocation. The subsequent\n`memcpy` of `no_of_bytes` bytes then writes well past the end of that\nbuffer.\n\nThis is reachable from the LE CoC transmit path, where `new_offset` is a\nsmall constant and `no_of_bytes` is derived from the peer's negotiated\nMPS:\n\n- A BLE LE Credit-Based Connection is established in which the peer\n  negotiates `mps >= 65515`, which passes validation against\n  `L2CAP_LE_MAX_MPS` (65533). In `l2c_ble.cc`, `p_ccb->tx_mps` is set to\n  `peer_conn_cfg.mps` with no further cap.\n- An unprivileged app writes a single message of length\n  `>= (peer mps - 4)` on the LE CoC socket. `btif_sock_l2cap` caps each\n  write to `sock->tx_mtu`, which comes from the connection open\n  parameters, so large writes are permitted once negotiated.\n- `l2c_lcc_get_next_xmit_sdu_seg` computes\n  `no_of_bytes_to_send = min(p_buf->len, (peer mps - 4))` and calls\n  `l2c_fcr_clone_buf` with `new_offset` in {`L2CAP_MIN_OFFSET` (13),\n  `L2CAP_LCC_OFFSET` (15)}.\n- For `no_of_bytes` around 65529, `buf_size` is about 65554, which wraps\n  the `uint16_t`, and roughly 65529 bytes are copied into the resulting\n  tiny allocation.\n\nThe overflowed bytes come directly from app data, so this is controlled\nheap corruption inside the Bluetooth process, which holds\n`CAP_NET_ADMIN`, `CAP_NET_RAW` and `CAP_NET_BIND_SERVICE`, and whose\nSELinux domain permits `SIOCDEVPRIVATE` ioctls to Wi-Fi driver private\ninterfaces. That combination makes this a meaningful privilege\nescalation primitive.\n\n\n---\n\nReported: 2026-02-15\nAcknowledged: 2026-02-15\nFixed: 2026-06-01\n[CVE-2026-0095](https://nvd.nist.gov/vuln/detail/CVE-2026-0095)\n[Android Security Bulletin](https://source.android.com/docs/security/bulletin/2026/2026-06-01)\n"
     },
     {
       "id": 3928996225,
