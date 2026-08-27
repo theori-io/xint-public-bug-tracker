@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-08-25T16:21:11.595Z",
+  "generated_at": "2026-08-27T18:28:24.771Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 51,
+  "count": 52,
   "items": [
+    {
+      "id": 5270862061,
+      "number": 52,
+      "title_raw": "[MEDIUM] Bug in Next.js under embargo",
+      "title_display": "Bug in Next.js under embargo",
+      "severity": "medium",
+      "severity_rank": 2,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "medium"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/52",
+      "created_at": "2026-08-27T18:28:11Z",
+      "updated_at": "2026-08-27T18:28:14Z",
+      "body_markdown": "A vulnerability was discovered by Xint inNext.js and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as MEDIUM.\n\n---\n\nReported: 2026-08-27\n\n"
+    },
     {
       "id": 4550911325,
       "number": 51,
@@ -872,8 +889,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 51,
-    "wall_items": 51,
+    "open_issues_seen": 52,
+    "wall_items": 52,
     "severity_conflicts": 0
   }
 }
