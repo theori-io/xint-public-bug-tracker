@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-08-28T05:04:25.043Z",
+  "generated_at": "2026-10-06T16:24:29.063Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 53,
+  "count": 54,
   "items": [
+    {
+      "id": 5731841899,
+      "number": 54,
+      "title_raw": "[HIGH] heap-buffer-overflow in Pixel (BCM4383 firmware) under embargo",
+      "title_display": "heap-buffer-overflow in Pixel (BCM4383 firmware) under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/54",
+      "created_at": "2026-10-06T16:24:13Z",
+      "updated_at": "2026-10-06T16:24:17Z",
+      "body_markdown": "A heap-buffer-overflow was discovered by Xint in the Pixel's BCM4383 firmware and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as HIGH.\n\n---\n\nReported: 2026-10-04\nAcknowledged: 2026-10-04\n"
+    },
     {
       "id": 5274888611,
       "number": 53,
@@ -906,8 +923,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 53,
-    "wall_items": 53,
+    "open_issues_seen": 54,
+    "wall_items": 54,
     "severity_conflicts": 0
   }
 }
