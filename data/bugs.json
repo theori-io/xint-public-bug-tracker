@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T03:05:56.371Z",
+  "generated_at": "2026-10-11T03:07:48.683Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
   "count": 61,
   "items": [
@@ -102,8 +102,8 @@
       ],
       "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/56",
       "created_at": "2026-10-11T02:42:39Z",
-      "updated_at": "2026-10-11T03:02:03Z",
-      "body_markdown": "Vulnerability Details:\n\nA buffer over-read in Windows Win32k allows an authorized local attacker to disclose one byte of kernel memory. Microsoft has not published further technical details.\n\nThis affects supported Windows 10, Windows 11, and Windows Server 2012 through 2025 releases prior to the August 2026 security update.\n\nMore information available at https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62746\n\n---\n\nReported: TBD\nFixed: 2026-08-11\nCVE-2026-62746\n"
+      "updated_at": "2026-10-11T03:07:38Z",
+      "body_markdown": "Vulnerability Details:\n\nA buffer over-read in Windows Win32k allows an authorized local attacker to disclose one byte of kernel memory. Microsoft has not published further technical details.\n\nThis affects supported Windows 10, Windows 11, and Windows Server 2012 through 2025 releases prior to the August 2026 security update.\n\nMore information available at https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62746\n\n---\n\nFixed: 2026-08-11\nCVE-2026-62746\n"
     },
     {
       "id": 5731855197,
