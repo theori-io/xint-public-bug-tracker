@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T03:02:15.481Z",
+  "generated_at": "2026-10-11T03:02:34.238Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
   "count": 57,
   "items": [
@@ -17,8 +17,8 @@
       ],
       "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/57",
       "created_at": "2026-10-11T02:43:27Z",
-      "updated_at": "2026-10-11T02:43:30Z",
-      "body_markdown": "## Summary\n\nA link following flaw (CWE-59) in QNAP QTS and QuTS hero lets a remote, unauthenticated attacker traverse the file system to unintended locations.\n\n## Details\n\nQNAP's advisory QSA-26-05 describes the issue only as a link following vulnerability that lets remote attackers \"traverse the file system to unintended locations\"; the affected component and further technical details are not public. The vendor CVSS v4.0 vector (CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H) indicates network access with no privileges or user interaction and high impact to confidentiality, integrity, and availability, with attack requirements present (AT:P).\n\nThe fixed firmware builds are dated 2025-12-16 (QTS 5.2.8.3350, QuTS hero h5.2.8.3350) and 2025-12-25 (QuTS hero h5.3.2.3354); the advisory and CVE record were published on 2026-02-12 and 2026-02-11 respectively.\n\n- CWE-59: Improper Link Resolution Before File Access ('Link Following')\n- CVSS v4.0: 9.2 (Critical) / the combined vendor advisory QSA-26-05 is rated Important\n- Affected: QTS 5.2.x, QuTS hero h5.3.x, QuTS hero h5.2.x\n- Fixed versions: QTS 5.2.8.3350 build 20251216, QuTS hero h5.3.2.3354 build 20251225, QuTS hero h5.2.8.3350 build 20251216\n- Credit: QSA-26-05 (which covers three CVEs) acknowledges both coral and \"Theori, with Xint\"; the individual CVE record credits coral. The CVE-specific Theori attribution is supplied in LIST.md.\n\n## Proof of Concept\n\nN/A (no public PoC)\n\n## Impact\n\nA remote attacker can access file system locations outside the intended path on the NAS; QNAP scores the result as high impact to confidentiality, integrity, and availability.\n\n## Timeline\n\nReported: TBD\nFixed: [2026-02-12](https://www.qnap.com/en/security-advisory/qsa-26-05)\n[CVE-2025-66277](https://www.cve.org/CVERecord?id=CVE-2025-66277)\n"
+      "updated_at": "2026-10-11T03:02:23Z",
+      "body_markdown": "Vulnerability Details:\n\nA link following vulnerability in QNAP QTS and QuTS hero allows a remote attacker to traverse the file system to unintended locations. QNAP has not published the affected component or further technical details.\n\nThis affects QTS 5.2.x and QuTS hero h5.2.x / h5.3.x. Fixed in QTS 5.2.8.3350 build 20251216, QuTS hero h5.2.8.3350 build 20251216, and QuTS hero h5.3.2.3354 build 20251225.\n\nMore information available at https://www.qnap.com/en/security-advisory/qsa-26-05\n\n---\n\nReported: TBD\nFixed: 2026-02-12\nCVE-2025-66277"
     },
     {
       "id": 5797356928,
