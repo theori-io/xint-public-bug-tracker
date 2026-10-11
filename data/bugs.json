@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T02:43:42.213Z",
+  "generated_at": "2026-10-11T03:01:30.303Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
   "count": 57,
   "items": [
@@ -34,8 +34,8 @@
       ],
       "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/56",
       "created_at": "2026-10-11T02:42:39Z",
-      "updated_at": "2026-10-11T02:42:43Z",
-      "body_markdown": "## Summary\n\nA buffer over-read in the Win32k kernel subsystem lets a local, authenticated attacker leak one byte of kernel memory.\n\n## Details\n\nMicrosoft describes the issue as a buffer over-read (CWE-126) in Win32k reachable by an authorized local user with low attack complexity and no user interaction (CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N). Per Microsoft's FAQ, successful exploitation leaks one byte of kernel memory back to the attacker. No further technical details have been published.\n\n- CWE-126: Buffer Over-read\n- CVSS v3.1: 5.5 (Medium) / Microsoft severity: Important\n- Affected: Windows 10 (1607, 1809, 21H2, 22H2), Windows 11 (23H2, 24H2, 25H2, 26H1), Windows Server 2012, 2012 R2, 2016, 2019, 2022, 2025\n- Credit: JeongOh Kyea with Theori, with Xint (also acknowledged: Minwoo Jeong (P1nkjelly) with KAIST Hacking Lab; Anonymous)\n\n## Proof of Concept\n\nN/A (no public PoC)\n\n## Impact\n\nA local attacker can disclose one byte of kernel memory per exploitation, which could assist further kernel exploitation.\n\n## Timeline\n\nReported: TBD\nFixed: [2026-08-11](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62746)\n[CVE-2026-62746](https://www.cve.org/CVERecord?id=CVE-2026-62746)\n"
+      "updated_at": "2026-10-11T03:01:19Z",
+      "body_markdown": "Vulnerability Details:\n\nA buffer over-read in Windows Win32k allows an authorized local attacker to disclose one byte of kernel memory. Microsoft has not published further technical details.\n\nThis affects supported Windows 10, Windows 11, and Windows Server 2012 through 2025 releases prior to the August 2026 security update.\n\nMore information available at https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62746"
     },
     {
       "id": 5731855197,
