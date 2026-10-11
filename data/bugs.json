@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T03:08:04.297Z",
+  "generated_at": "2026-10-11T03:08:21.000Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
   "count": 61,
   "items": [
@@ -68,8 +68,8 @@
       ],
       "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/58",
       "created_at": "2026-10-11T03:04:48Z",
-      "updated_at": "2026-10-11T03:04:51Z",
-      "body_markdown": "Vulnerability Details:\n\nA path traversal (zip-slip) in Wireshark's configuration profile importer allows a crafted profile archive to write files outside the intended directory. Importing a malicious profile can lead to a crash or arbitrary code execution as the user.\n\nThis affects Wireshark 4.6.0 to 4.6.4 and 4.4.0 to 4.4.14. Fixed in 4.6.5 and 4.4.15 (released 2026-04-29).\n\nMore information available at https://www.wireshark.org/security/wnpa-sec-2026-21.html\n\n---\n\nReported: 2026-03-23\nFixed: 2026-03-23\n[Upstream Fix](https://gitlab.com/wireshark/wireshark/-/merge_requests/24035)\nCVE-2026-5656"
+      "updated_at": "2026-10-11T03:08:10Z",
+      "body_markdown": "Vulnerability Details:\n\nA path traversal (zip-slip) in Wireshark's configuration profile importer allows a crafted profile archive to write files outside the intended directory. Importing a malicious profile can lead to a crash or arbitrary code execution as the user.\n\nThis affects Wireshark 4.6.0 to 4.6.4 and 4.4.0 to 4.4.14. Fixed in 4.6.5 and 4.4.15 (released 2026-04-29).\n\nMore information available at https://www.wireshark.org/security/wnpa-sec-2026-21.html\n\n---\n\nFixed: 2026-03-23\n[Upstream Fix](https://gitlab.com/wireshark/wireshark/-/merge_requests/24035)\nCVE-2026-5656"
     },
     {
       "id": 5797360941,
