@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-10-11T03:08:56.627Z",
+  "generated_at": "2026-10-12T18:08:01.572Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 61,
+  "count": 62,
   "items": [
+    {
+      "id": 5818310128,
+      "number": 62,
+      "title_raw": "[High] Logic bug in Android NFC under embargo",
+      "title_display": "Logic bug in Android NFC under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/62",
+      "created_at": "2026-10-12T18:07:44Z",
+      "updated_at": "2026-10-12T18:07:48Z",
+      "body_markdown": "A vulnerability was discovered by Xint in Android's NFC code and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as High.\n\n---\n\nReported: 2026-10-08\nAcknowledged: 2026-10-08\n"
+    },
     {
       "id": 5797481419,
       "number": 61,
@@ -1042,8 +1059,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 61,
-    "wall_items": 61,
+    "open_issues_seen": 62,
+    "wall_items": 62,
     "severity_conflicts": 0
   }
 }
