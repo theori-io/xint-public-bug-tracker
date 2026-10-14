@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-10-14T11:48:53.521Z",
+  "generated_at": "2026-10-14T12:13:10.987Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 70,
+  "count": 71,
   "items": [
+    {
+      "id": 5847552033,
+      "number": 71,
+      "title_raw": "[HIGH] Sandbox escape in Codex Desktop under embargo",
+      "title_display": "Sandbox escape in Codex Desktop under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/71",
+      "created_at": "2026-10-14T12:12:50Z",
+      "updated_at": "2026-10-14T12:12:54Z",
+      "body_markdown": "A vulnerability was discovered by Xint in Codex Desktop and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as High.\n\n---\n\nReported: 2026-10-02\nAcknowledged: 2026-10-06"
+    },
     {
       "id": 5847213465,
       "number": 70,
@@ -1195,8 +1212,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 70,
-    "wall_items": 70,
+    "open_issues_seen": 71,
+    "wall_items": 71,
     "severity_conflicts": 0
   }
 }
