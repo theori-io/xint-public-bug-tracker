@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-10-14T11:35:26.005Z",
+  "generated_at": "2026-10-14T11:35:56.753Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 68,
+  "count": 69,
   "items": [
+    {
+      "id": 5847046156,
+      "number": 69,
+      "title_raw": "[HIGH] Access control bypass in Home Assistant under embargo",
+      "title_display": "Access control bypass in Home Assistant under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/69",
+      "created_at": "2026-10-14T11:35:35Z",
+      "updated_at": "2026-10-14T11:35:42Z",
+      "body_markdown": "A vulnerability was discovered by Xint in Home Assistant and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as High.\n\n---\n\nReported: 2026-10-08"
+    },
     {
       "id": 5847040673,
       "number": 68,
@@ -1161,8 +1178,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 68,
-    "wall_items": 68,
+    "open_issues_seen": 69,
+    "wall_items": 69,
     "severity_conflicts": 0
   }
 }
