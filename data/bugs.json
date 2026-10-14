@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-10-14T16:18:59.818Z",
+  "generated_at": "2026-10-14T16:19:22.576Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 78,
+  "count": 79,
   "items": [
+    {
+      "id": 5851395319,
+      "number": 79,
+      "title_raw": "[HIGH] Pre-authentication code execution in Oracle Autonomous AI Database APEX under embargo",
+      "title_display": "Pre-authentication code execution in Oracle Autonomous AI Database APEX under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/79",
+      "created_at": "2026-10-14T16:19:05Z",
+      "updated_at": "2026-10-14T16:19:09Z",
+      "body_markdown": "A vulnerability was discovered by Xint in Oracle Autonomous AI Database and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as High.\n\n\n---\n\nReported: 2026-10-08\n"
+    },
     {
       "id": 5851389028,
       "number": 78,
@@ -1331,8 +1348,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 78,
-    "wall_items": 78,
+    "open_issues_seen": 79,
+    "wall_items": 79,
     "severity_conflicts": 0
   }
 }
