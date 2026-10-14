@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-10-14T12:13:10.987Z",
+  "generated_at": "2026-10-14T13:36:26.905Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 71,
+  "count": 72,
   "items": [
+    {
+      "id": 5848811348,
+      "number": 72,
+      "title_raw": "[HIGH] Authorization bypass in Philips Hue Bridge Pro under embargo",
+      "title_display": "Authorization bypass in Philips Hue Bridge Pro under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/72",
+      "created_at": "2026-10-14T13:36:10Z",
+      "updated_at": "2026-10-14T13:36:14Z",
+      "body_markdown": "A vulnerability was discovered by Xint in Philips Hue Bridge Pro and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as High.\n\n---\n\nReported: 2026-10-07"
+    },
     {
       "id": 5847552033,
       "number": 71,
@@ -1212,8 +1229,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 71,
-    "wall_items": 71,
+    "open_issues_seen": 72,
+    "wall_items": 72,
     "severity_conflicts": 0
   }
 }
