@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-10-14T13:41:34.503Z",
+  "generated_at": "2026-10-14T13:42:04.191Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 74,
+  "count": 75,
   "items": [
+    {
+      "id": 5848900422,
+      "number": 75,
+      "title_raw": "[HIGH] Fail-open container integrity validation in Philips Hue Bridge Pro under embargo",
+      "title_display": "Fail-open container integrity validation in Philips Hue Bridge Pro under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/75",
+      "created_at": "2026-10-14T13:41:44Z",
+      "updated_at": "2026-10-14T13:41:49Z",
+      "body_markdown": "A vulnerability was discovered by Xint in Philips Hue Bridge Pro and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as High.\n\n---\n\nReported: 2026-10-07\n"
+    },
     {
       "id": 5848892304,
       "number": 74,
@@ -1263,8 +1280,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 74,
-    "wall_items": 74,
+    "open_issues_seen": 75,
+    "wall_items": 75,
     "severity_conflicts": 0
   }
 }
