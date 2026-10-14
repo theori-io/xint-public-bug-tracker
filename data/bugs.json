@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-10-14T11:35:56.753Z",
+  "generated_at": "2026-10-14T11:48:28.015Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 69,
+  "count": 70,
   "items": [
+    {
+      "id": 5847213465,
+      "number": 70,
+      "title_raw": "[HIGH] Buffer overflow in a Google Android application under embargo",
+      "title_display": "Buffer overflow in a Google Android application under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/70",
+      "created_at": "2026-10-14T11:48:05Z",
+      "updated_at": "2026-10-14T11:48:08Z",
+      "body_markdown": "A vulnerability was discovered by Xint in a Google Android application and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as High.\n\n---\n\nReported: 2026-10-02\nAcknowledged: 2026-10-02"
+    },
     {
       "id": 5847046156,
       "number": 69,
@@ -1178,8 +1195,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 69,
-    "wall_items": 69,
+    "open_issues_seen": 70,
+    "wall_items": 70,
     "severity_conflicts": 0
   }
 }
