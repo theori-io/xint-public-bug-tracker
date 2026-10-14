@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-10-14T11:32:41.912Z",
+  "generated_at": "2026-10-14T11:33:56.142Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 64,
+  "count": 65,
   "items": [
+    {
+      "id": 5847019453,
+      "number": 65,
+      "title_raw": "[HIGH] Request injection in Music Assistant under embargo",
+      "title_display": "Request injection in Music Assistant under embargo",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/65",
+      "created_at": "2026-10-14T11:33:35Z",
+      "updated_at": "2026-10-14T11:33:39Z",
+      "body_markdown": "A vulnerability was discovered by Xint in Music Assistant and reported to the vendor. Technical details are currently restricted.\n\nThe security impact of this bug has been assessed as High.\n\n---\n\nReported: 2026-10-08"
+    },
     {
       "id": 5847004003,
       "number": 64,
@@ -1093,8 +1110,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 64,
-    "wall_items": 64,
+    "open_issues_seen": 65,
+    "wall_items": 65,
     "severity_conflicts": 0
   }
 }
