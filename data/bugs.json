@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-10-27T18:44:18.481Z",
+  "generated_at": "2026-10-27T18:45:01.314Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 90,
+  "count": 91,
   "items": [
+    {
+      "id": 6065557920,
+      "number": 91,
+      "title_raw": "[HIGH] Heap-based buffer overflow in Windows",
+      "title_display": "Heap-based buffer overflow in Windows",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/91",
+      "created_at": "2026-10-27T18:44:40Z",
+      "updated_at": "2026-10-27T18:44:45Z",
+      "body_markdown": "Vulnerability Details:\n\nA heap-based buffer overflow in the Windows Kernel allows an authorized local attacker to elevate privileges. Microsoft has not published further technical details.\n\nThis affects supported Windows releases prior to the October 2026 security update.\n\nMore information available at https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96312\n\n---\n\nReported: 2026-07-23\nFixed: 2026-10-13\nCVE-2026-96312"
+    },
     {
       "id": 6065547326,
       "number": 90,
@@ -1535,8 +1552,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 90,
-    "wall_items": 90,
+    "open_issues_seen": 91,
+    "wall_items": 91,
     "severity_conflicts": 0
   }
 }
