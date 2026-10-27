@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-10-27T18:43:32.667Z",
+  "generated_at": "2026-10-27T18:43:54.231Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 88,
+  "count": 89,
   "items": [
+    {
+      "id": 6065540631,
+      "number": 89,
+      "title_raw": "[HIGH] Use-after-free in Windows",
+      "title_display": "Use-after-free in Windows",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/89",
+      "created_at": "2026-10-27T18:43:34Z",
+      "updated_at": "2026-10-27T18:43:38Z",
+      "body_markdown": "Vulnerability Details:\n\nA use-after-free in the Windows Update Service allows an authorized local attacker to elevate privileges. Microsoft has not published further technical details.\n\nThis affects supported Windows releases prior to the October 2026 security update.\n\nMore information available at https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-100200\n\n---\n\nReported: 2026-08-26\nFixed: 2026-10-13\nCVE-2026-100200"
+    },
     {
       "id": 6065536169,
       "number": 88,
@@ -1501,8 +1518,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 88,
-    "wall_items": 88,
+    "open_issues_seen": 89,
+    "wall_items": 89,
     "severity_conflicts": 0
   }
 }
