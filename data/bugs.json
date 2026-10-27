@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-10-27T18:41:16.197Z",
+  "generated_at": "2026-10-27T18:41:53.933Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 85,
+  "count": 86,
   "items": [
+    {
+      "id": 6065509854,
+      "number": 86,
+      "title_raw": "[HIGH] Path traversal in pulpcore content upload API",
+      "title_display": "Path traversal in pulpcore content upload API",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/86",
+      "created_at": "2026-10-27T18:41:33Z",
+      "updated_at": "2026-10-27T18:41:38Z",
+      "body_markdown": "Vulnerability Details:\n\nA path traversal vulnerability in the pulpcore content upload API allows an authenticated user with low-privilege repository permissions to read any file accessible to the Pulp server process. The API accepts a `file_url` parameter whose scheme validation rejects only URLs beginning with `file://`, while Python's URL parser also recognizes the `file:` scheme without double slashes. The mismatch between what is validated and what is dispatched to the file downloader lets a crafted URL with relative traversal sequences escape the intended allowlist.\nMore information available at https://github.com/advisories/GHSA-mfxv-9hc5-3jv3\n\n---\n\nReported: 2026-09-12\nFixed: 2026-09-24\nCVE-2026-90959"
+    },
     {
       "id": 6065501458,
       "number": 85,
@@ -1450,8 +1467,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 85,
-    "wall_items": 85,
+    "open_issues_seen": 86,
+    "wall_items": 86,
     "severity_conflicts": 0
   }
 }
