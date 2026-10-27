@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-27T18:48:40.709Z",
+  "generated_at": "2026-10-27T18:50:50.448Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 96,
+  "count": 95,
   "items": [
     {
       "id": 6065616895,
@@ -52,23 +52,6 @@
       "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/94",
       "created_at": "2026-10-27T18:46:45Z",
       "updated_at": "2026-10-27T18:46:50Z",
-      "body_markdown": "Vulnerability Details:\n\nThe User Session Note mapper in Keycloak does not validate whether a requested session note holds sensitive internal credentials such as federated access tokens from external identity providers. A delegated client administrator can therefore cause a user's upstream bearer tokens to be written into the tokens issued to their managed application, leading to unauthorized access to the user's data on those external platforms.\n\nMore information available at https://github.com/advisories/GHSA-3xph-hcf4-hx94\n\n---\n\nReported: 2026-09-19\nFixed: 2026-10-05\nCVE-2026-105302"
-    },
-    {
-      "id": 6065583461,
-      "number": 93,
-      "title_raw": "[MEDIUM] Information disclosure in Keycloak User Session Note mapper",
-      "title_display": "Information disclosure in Keycloak User Session Note mapper",
-      "severity": "medium",
-      "severity_rank": 2,
-      "severity_conflict": false,
-      "state": "open",
-      "labels": [
-        "medium"
-      ],
-      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/93",
-      "created_at": "2026-10-27T18:46:16Z",
-      "updated_at": "2026-10-27T18:46:21Z",
       "body_markdown": "Vulnerability Details:\n\nThe User Session Note mapper in Keycloak does not validate whether a requested session note holds sensitive internal credentials such as federated access tokens from external identity providers. A delegated client administrator can therefore cause a user's upstream bearer tokens to be written into the tokens issued to their managed application, leading to unauthorized access to the user's data on those external platforms.\n\nMore information available at https://github.com/advisories/GHSA-3xph-hcf4-hx94\n\n---\n\nReported: 2026-09-19\nFixed: 2026-10-05\nCVE-2026-105302"
     },
     {
@@ -1637,8 +1620,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 96,
-    "wall_items": 96,
+    "open_issues_seen": 95,
+    "wall_items": 95,
     "severity_conflicts": 0
   }
 }
