@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-10-27T18:47:19.677Z",
+  "generated_at": "2026-10-27T18:48:40.709Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 95,
+  "count": 96,
   "items": [
+    {
+      "id": 6065616895,
+      "number": 96,
+      "title_raw": "[MEDIUM] Improper access control in Oracle VM VirtualBox Core",
+      "title_display": "Improper access control in Oracle VM VirtualBox Core",
+      "severity": "medium",
+      "severity_rank": 2,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "medium"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/96",
+      "created_at": "2026-10-27T18:48:23Z",
+      "updated_at": "2026-10-27T18:48:27Z",
+      "body_markdown": "Vulnerability Details:\n\nA vulnerability in the Core component of Oracle VM VirtualBox allows a low-privileged attacker with logon access to the host where VirtualBox executes to compromise VirtualBox. Successful attacks require human interaction from a person other than the attacker, and can result in unauthorized creation, deletion or modification of critical data, and in a partial denial of service.\n\nThis affects Oracle VM VirtualBox 7.2.12.\n\nMore information available at https://nvd.nist.gov/vuln/detail/CVE-2026-47053\n\n---\n\nFixed: 2026-07-21\nCVE-2026-47053"
+    },
     {
       "id": 6065595359,
       "number": 95,
@@ -1620,8 +1637,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 95,
-    "wall_items": 95,
+    "open_issues_seen": 96,
+    "wall_items": 96,
     "severity_conflicts": 0
   }
 }
