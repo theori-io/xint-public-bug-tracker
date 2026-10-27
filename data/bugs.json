@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-10-27T18:45:01.314Z",
+  "generated_at": "2026-10-27T18:45:20.236Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 91,
+  "count": 92,
   "items": [
+    {
+      "id": 6065563742,
+      "number": 92,
+      "title_raw": "[MEDIUM] Improper certificate validation in Erlang/OTP ssl",
+      "title_display": "Improper certificate validation in Erlang/OTP ssl",
+      "severity": "medium",
+      "severity_rank": 2,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "medium"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/92",
+      "created_at": "2026-10-27T18:45:02Z",
+      "updated_at": "2026-10-27T18:45:08Z",
+      "body_markdown": "Vulnerability Details:\n\nAn improper certificate validation issue in the Erlang/OTP `ssl` application allows a client holding a certificate trusted by one SNI virtual host to authenticate to a second SNI virtual host on the same listener by resuming its TLS 1.2 session there. A server serving several SNI names from one listen socket through `sni_fun` or `sni_hosts` keeps a single pre-TLS 1.3 session cache per listener and does not bind a cached session to the SNI name or client trust policy that established it, so on an abbreviated handshake the cached client certificate is accepted without being revalidated against the higher-trust CA.\n\nThis affects the `ssl` application from OTP 18.0 (ssl 7.0) onward.\n\nMore information available at https://github.com/erlang/otp/security/advisories/GHSA-2g23-cgjh-34gq\n\n---\n\nFixed: 2026-10-14\nCVE-2026-105236"
+    },
     {
       "id": 6065557920,
       "number": 91,
@@ -1552,8 +1569,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 91,
-    "wall_items": 91,
+    "open_issues_seen": 92,
+    "wall_items": 92,
     "severity_conflicts": 0
   }
 }
