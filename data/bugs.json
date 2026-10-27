@@ -1,8 +1,25 @@
 {
-  "generated_at": "2026-10-27T18:41:53.933Z",
+  "generated_at": "2026-10-27T18:42:29.710Z",
   "source_repo": "theori-io/xint-public-bug-tracker",
-  "count": 86,
+  "count": 87,
   "items": [
+    {
+      "id": 6065519880,
+      "number": 87,
+      "title_raw": "[HIGH] Incorrect access control in OpenNebula one.vm.exec",
+      "title_display": "Incorrect access control in OpenNebula one.vm.exec",
+      "severity": "high",
+      "severity_rank": 3,
+      "severity_conflict": false,
+      "state": "open",
+      "labels": [
+        "high"
+      ],
+      "html_url": "https://github.com/theori-io/xint-public-bug-tracker/issues/87",
+      "created_at": "2026-10-27T18:42:12Z",
+      "updated_at": "2026-10-27T18:42:17Z",
+      "body_markdown": "Vulnerability Details:\nAn incorrect access control issue in OpenNebula allows an authenticated user with basic permissions to execute commands on virtual machines belonging to other users through the `one.vm.exec` function, without verification of access permissions. Exploitation only requires knowing the target virtual machine's identifier and for qemu-agent to be enabled on it, and compromises the confidentiality, integrity and availability of the affected virtual machines.\nThis affects all versions prior to OpenNebula 7.4.\nMore information available at https://github.com/advisories/GHSA-m4j2-w8wf-vp83\n\n---\n\nReported: 2026-07-14\nFixed: 2026-09-01\nCVE-2026-84165"
+    },
     {
       "id": 6065509854,
       "number": 86,
@@ -1467,8 +1484,8 @@
     }
   ],
   "meta": {
-    "open_issues_seen": 86,
-    "wall_items": 86,
+    "open_issues_seen": 87,
+    "wall_items": 87,
     "severity_conflicts": 0
   }
 }
